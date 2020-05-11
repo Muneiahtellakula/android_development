@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".text_and_scrollView.TextAndScrollViewActivity">
+
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_margin="10dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:text="@string/text_scroll"
+        android:autoLink="all"
+        android:layout_margin="10dp"
+        android:textSize="25sp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/tv_scrollview"/>
+</LinearLayout>
+</ScrollView>
