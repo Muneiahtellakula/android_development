@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".text_and_scrollView.TextAndScrollViewActivity"></activity>
+        <activity android:name=".Intents.IntentsActivity"></activity>
+        <activity android:name=".text_and_scrollView.TextAndScrollViewActivity" />
         <activity android:name=".HelloToast.Hello_Toast_Class" />
         <activity
             android:name=".MainActivity"

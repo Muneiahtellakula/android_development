@@ -14,6 +14,7 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
 import com.muneiah.android2020.HelloToast.Hello_Toast_Class;
+import com.muneiah.android2020.Intents.IntentsActivity;
 import com.muneiah.android2020.MainActivity;
 import com.muneiah.android2020.R;
 import com.muneiah.android2020.text_and_scrollView.TextAndScrollViewActivity;
@@ -29,6 +30,14 @@ public class HomeFragment extends Fragment {
         View root = inflater.inflate(R.layout.fragment_home, container, false);
         final Button toastButton = root.findViewById(R.id.hello_toastApp_btn);
         final Button scrollViewButton = root.findViewById(R.id.text_sroll_btn);
+        final Button intentButton = root.findViewById(R.id.intents_button);
+        intentButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(getContext(), IntentsActivity.class);
+                startActivity(intent);
+            }
+        });
         toastButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
