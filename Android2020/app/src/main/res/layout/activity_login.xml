@@ -18,6 +18,7 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:id="@+id/tetn"
             android:inputType="textPersonName"
             android:gravity="center"
             android:hint="Enter the user Name" />
@@ -31,6 +32,7 @@
                 android:layout_width="match_parent"
                 android:inputType="textPassword"
                 android:gravity="center"
+                android:id="@+id/tetp"
                 android:layout_height="wrap_content"
                 android:hint="Enter the password" />
     </com.google.android.material.textfield.TextInputLayout>
