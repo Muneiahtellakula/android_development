@@ -27,25 +27,27 @@
 
     <TextView
         android:textStyle="bold"
-        android:textSize="18sp"
+        android:textSize="15sp"
         android:textColor="@color/colorPrimary"
         android:id="@+id/textView4"
+        android:layout_marginTop="10dp"
         android:layout_width="wrap_content"
         android:layout_weight="1"
         android:layout_height="0dp"
 
         android:text="TextView"
         />
+
     <TextView
         android:id="@+id/textView5"
         android:layout_width="wrap_content"
-        android:layout_weight="1"
         android:layout_height="0dp"
-        android:text="TextView"
-        android:textSize="15sp"
         android:layout_marginLeft="80dp"
+        android:layout_weight="1"
+        android:layout_marginTop="40dp"
+        android:text="TextView"
         android:textColor="@color/colorAccent"
-        />
+        android:textSize="13sp" />
 
     <TextView
         android:id="@+id/textView6"
@@ -54,6 +56,7 @@
         android:layout_height="0dp"
        android:layout_marginLeft="100dp"
         android:text="TextView"
+        android:layout_marginTop="50dp"
         android:textSize="14sp"
         android:textColor="@android:color/black"
         />

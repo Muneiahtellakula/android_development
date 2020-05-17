@@ -35,13 +35,13 @@
         <item>Mr.K Chaithanya</item>
         <item>Mr.V M K Gopal</item>
         <item>Mr.P S V Krishna</item>
-        <item>Mr.K Masthan Vali</item>
+        <item>Mr.P Masthan Vali</item>
         <item>Mr.T Muneiah</item>
-        <item>Mr.K Pavan Kumar Reddy</item>
+        <item>Mr.T Pavan Kumar</item>
         <item>Mr.R Rami Reddy</item>
-        <item>Mr.S Sai Shankar</item>
+        <item>Mr.G Sai Shankar</item>
         <item>Mr.B Siva Prasad</item>
-        <item>Mr.K Vara Prasad</item>
+        <item>Mr.S Vara Prasad</item>
     </string-array>
     <string-array name="exprence">
         <item>5.6 Years</item>
@@ -67,6 +67,6 @@
         <item>B.Tech</item>
         <item>B.Tech</item>
         <item>B.Tech</item>
-        <item>B.Tech</item>
+        <item>M C A</item>
     </string-array>
 </resources>
