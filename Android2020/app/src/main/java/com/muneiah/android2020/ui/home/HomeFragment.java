@@ -21,6 +21,7 @@ import com.muneiah.android2020.Intents.IntentsActivity;
 import com.muneiah.android2020.MainActivity;
 import com.muneiah.android2020.R;
 import com.muneiah.android2020.RecyclerView.RecyclerViewDemo;
+import com.muneiah.android2020.SharedPrefarences.LoginActivity;
 import com.muneiah.android2020.text_and_scrollView.TextAndScrollViewActivity;
 
 public class HomeFragment extends Fragment {
@@ -37,6 +38,14 @@ public class HomeFragment extends Fragment {
         final Button intentButton = root.findViewById(R.id.intents_button);
         final Button rec = root.findViewById(R.id.rec_button);
         final Button usrInput = root.findViewById(R.id.button_input);
+        final Button sharedbtn = root.findViewById(R.id.button_Shared);
+        sharedbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(getContext(), LoginActivity.class);
+                startActivity(intent);
+            }
+        });
         usrInput.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

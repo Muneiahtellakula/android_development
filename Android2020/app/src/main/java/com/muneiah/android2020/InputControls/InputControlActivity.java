@@ -3,6 +3,7 @@ package com.muneiah.android2020.InputControls;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.RatingBar;
@@ -67,8 +68,28 @@ TextView t;
         String myname=nam.getEditText().getText().toString();
         String mymail=mail.getEditText().getText().toString();
         String mymob=mob.getEditText().getText().toString();
+        String mypassword=pas.getEditText().getText().toString();
                 t.setText("Rating: "+getrating+"/"+noofstars+"\n\n"+myname+"\n\n"+mymail
                 +"\n\n"+mymob);
+
+    }
+    @Override
+    protected void onPause() {
+        super.onPause();
+        SharedPreferences sharedPreferences=getSharedPreferences("muni",MODE_PRIVATE);
+        SharedPreferences.Editor editor=sharedPreferences.edit();
+        editor.putString("uname",nam.getEditText().getText().toString());
+        editor.putString("upass",pas.getEditText().getText().toString());
+        editor.commit();
+
+    }
+    @Override
+    protected void onResume() {
+        super.onResume();
+        SharedPreferences sharedPreferences=getSharedPreferences("muni",MODE_PRIVATE);
+        String ss=sharedPreferences.getString("uname","");
+        String pp=sharedPreferences.getString("upass","");
+        Toast.makeText(this, " Shared "+ss + pp, Toast.LENGTH_SHORT).show();
 
     }
 }
