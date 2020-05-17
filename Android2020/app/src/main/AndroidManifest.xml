@@ -9,7 +9,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".InputControls.InputControlActivity"></activity>
+        <receiver
+            android:name=".BroadCastRecevers.MyReceiver"
+            android:enabled="true"
+            android:exported="true">
+        </receiver>
+
+        <activity android:name=".InputControls.InputControlActivity" />
         <activity android:name=".RecyclerView.RecyclerViewDemo" />
         <activity android:name=".Intents.IntentsActivity" />
         <activity android:name=".text_and_scrollView.TextAndScrollViewActivity" />
