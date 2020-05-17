@@ -69,4 +69,11 @@
         <item>B.Tech</item>
         <item>M C A</item>
     </string-array>
+    <string-array name="branch">
+        <item>Cse</item>
+        <item>Ece</item>
+        <item>EEE</item>
+        <item>Mech</item>
+
+    </string-array>
 </resources>
