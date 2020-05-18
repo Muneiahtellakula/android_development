@@ -45,13 +45,10 @@ public class LoginActivity extends AppCompatActivity {
          sName = sharedPreferences.getString("uname", "");
          sPass = sharedPreferences.getString("upass", "");
         if (mymob.equals(sName) && mypassword.equals(sPass)) {
-            editText.setText(sName);
-            pet.setText(sPass);
-
             Toast.makeText(this, "success", Toast.LENGTH_SHORT).show();
 
         }
     }
 
-  
+
 }

@@ -6,8 +6,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.CheckBox;
+import android.widget.RadioButton;
 import android.widget.RatingBar;
 import android.widget.SeekBar;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -19,6 +22,14 @@ RatingBar ratingBar;
 SeekBar seekBar;
 TextInputLayout nam,pas,mail,mob;
 TextView t;
+RadioButton m,f;
+CheckBox e;
+CheckBox te;
+CheckBox h;
+
+String language;
+String gender;
+Spinner spinner;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -58,19 +69,40 @@ TextView t;
         mail=findViewById(R.id.email);
         mob=findViewById(R.id.mobile);
         pas=findViewById(R.id.password);
+        m=findViewById(R.id.radioButton_m);
+        f=findViewById(R.id.radioButton_f);
+        spinner=findViewById(R.id.spin);
+        e=findViewById(R.id.checkBox_e);
+        h=findViewById(R.id.checkBox_h);
+        te=findViewById(R.id.checkBox_t);
+
     }
 
     public void submitValues(View view) {
         int noofstars = ratingBar.getNumStars();
         float getrating = ratingBar.getRating();
+
         Toast.makeText(this, "Rating: "+getrating+"/"+noofstars, Toast.LENGTH_SHORT).show();
+        String bran=spinner.getSelectedItem().toString();
+        if(m.isChecked()){
+            gender="m";
+        }else if(f.isChecked()){
+            gender="f";
+        }
+        if (h.isChecked()){
+            language="Hindi";
+        } if (te.isChecked()){
+            language=language+"\t"+"Telugu";
+        } if (e.isChecked()){
+            language=language+"\t"+"English";
+        }
 
         String myname=nam.getEditText().getText().toString();
         String mymail=mail.getEditText().getText().toString();
         String mymob=mob.getEditText().getText().toString();
         String mypassword=pas.getEditText().getText().toString();
-                t.setText("Rating: "+getrating+"/"+noofstars+"\n\n"+myname+"\n\n"+mymail
-                +"\n\n"+mymob);
+                t.setText("Rating: "+getrating+"/"+noofstars+"\n"+myname+"\n"+mymail
+                +"\n\n"+mymob+"\n"+language+"\n"+gender);
 
     }
     @Override
