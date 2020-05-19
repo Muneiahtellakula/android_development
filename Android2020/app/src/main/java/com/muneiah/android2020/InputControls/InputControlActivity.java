@@ -100,7 +100,6 @@ Spinner spinner;
         String myname=nam.getEditText().getText().toString();
         String mymail=mail.getEditText().getText().toString();
         String mymob=mob.getEditText().getText().toString();
-        String mypassword=pas.getEditText().getText().toString();
                 t.setText("Rating: "+getrating+"/"+noofstars+"\n"+myname+"\n"+mymail
                 +"\n\n"+mymob+"\n"+language+"\n"+gender);
 
