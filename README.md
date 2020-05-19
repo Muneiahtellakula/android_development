@@ -57,8 +57,8 @@ Microphone and Speakers facility for Offline training program.
       27. Saving user Data
             1. ViewModel
             2. LiveData
-      28. SharedPreferences
-      29. Room Persistence Library.
+            3. SharedPreferences
+            4. Room Persistence Library.
 
 
 
