@@ -12,24 +12,24 @@ Microphone and Speakers facility for Offline training program.
 36 Hours (3 hours each day X 12 days)
 
 
-### Syllabus :
+## FDP Syllabus :
 
-      1. Introduction to Mobile App Development
-      2. History of Mobile evolution
-      3. Version History of Android 
-      4. Android Architecture
-      5. Installing the Development Environment
-          a. Installation of Android Studio
-          b. Installation of Android emulator
-          c. Connecting the physical device with the IDE
-      6. Creating the first application 
-      7. Hello World
-      8. Creating a User Interactable App
-      9. Hello Toast
+       1. Introduction to Mobile App Development
+       2. History of Mobile evolution
+       3. Version History of Android 
+       4. Android Architecture
+       5. Installing the Development Environment
+            a. Installation of Android Studio
+            b. Installation of Android emulator
+            c. Connecting the physical device with the IDE
+       6. Creating the first application 
+       7. Hello World
+       8. Creating a User Interactable App
+       9. Hello Toast
       10. Text and Scroll View
       11. Intents
-          a. Explicit Intents
-          b. Implicit Intents
+            a. Explicit Intents
+            b. Implicit Intents
       12. Activity LifeCycle
       13. User Interface Components
       14. Buttons and Clickable Images
