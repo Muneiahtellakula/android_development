@@ -19,17 +19,17 @@ Microphone and Speakers facility for Offline training program.
       3. Version History of Android 
       4. Android Architecture
       5. Installing the Development Environment
-          1. Installation of Android Studio
-          2. Installation of Android emulator
-          3. Connecting the physical device with the IDE
+          a. Installation of Android Studio
+          b. Installation of Android emulator
+          c. Connecting the physical device with the IDE
       6. Creating the first application 
       7. Hello World
       8. Creating a User Interactable App
       9. Hello Toast
       10. Text and Scroll View
       11. Intents
-          1. Explicit Intents
-          2. Implicit Intents
+          a. Explicit Intents
+          b. Implicit Intents
       12. Activity LifeCycle
       13. User Interface Components
       14. Buttons and Clickable Images
@@ -37,28 +37,28 @@ Microphone and Speakers facility for Offline training program.
       16. Menus & Pickers
       17. Using Material Design for UI
       18. User Navigation
-      19. Navigation Drawer 
-      20. Navigation Components
-          1. Navigation Graph
-          2. Navigation Host
-          3. Navigation Controller
-          4. Ancestral and Back Navigation
-          5. Lateral Navigation 
-          6. Tabs for navigation
-      21. Recyclerview and DiffUtil
-      22. Working in the background
-      23. Fetching JSON Data from the internet using retrofit GET.
-            1. Discussion of various JSON Converters.
-            2. Writing data to the api using retrofit POST.
-      24. Broadcast Receivers
-      26. Schedulers
-            1. Notifications
-            2. WorkManger
-      27. Saving user Data
-            1. ViewModel
-            2. LiveData
-            3. SharedPreferences
-            4. Room Persistence Library.
+            a. Navigation Drawer 
+            b. Navigation Components
+                  i. Navigation Graph
+                 ii. Navigation Host
+                iii. Navigation Controller
+            c. Ancestral and Back Navigation
+            d. Lateral Navigation 
+                  i. Tabs for navigation
+      19. Recyclerview and DiffUtil
+      20. Working in the background
+      21. Fetching JSON Data from the internet using retrofit GET.
+            a. Discussion of various JSON Converters.
+            b. Writing data to the api using retrofit POST.
+      22. Broadcast Receivers
+      23. Schedulers
+            a. Notifications
+            b. WorkManger
+      24. Saving user Data
+            a. ViewModel
+            b. LiveData
+            c. SharedPreferences
+            d. Room Persistence Library.
 
 
 
