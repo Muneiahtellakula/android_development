@@ -19,6 +19,7 @@ import com.muneiah.android2020.HelloToast.Hello_Toast_Class;
 import com.muneiah.android2020.InputControls.InputControlActivity;
 import com.muneiah.android2020.Intents.IntentsActivity;
 import com.muneiah.android2020.MainActivity;
+import com.muneiah.android2020.NavigationComponent.NavigationActivity;
 import com.muneiah.android2020.R;
 import com.muneiah.android2020.RecyclerView.RecyclerViewDemo;
 import com.muneiah.android2020.SharedPrefarences.LoginActivity;
@@ -39,6 +40,14 @@ public class HomeFragment extends Fragment {
         final Button rec = root.findViewById(R.id.rec_button);
         final Button usrInput = root.findViewById(R.id.button_input);
         final Button sharedbtn = root.findViewById(R.id.button_Shared);
+        final Button nav_btn = root.findViewById(R.id.button_navigation);
+        nav_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(getContext(), NavigationActivity.class);
+                startActivity(intent);
+            }
+        });
         sharedbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

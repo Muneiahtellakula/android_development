@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    android:weightSum="3"
+    tools:context=".NavigationComponent.NavigationHomeFragment">
+<Button
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_margin="10dp"
+    android:layout_weight="1"
+    android:id="@+id/redbtn"
+    android:background="#F44336"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_margin="10dp"
+
+        android:id="@+id/whitbtn"
+       android:background="@drawable/flag_chakara"/>
+    <Button
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+        android:layout_margin="10dp"
+    android:layout_weight="1"
+    android:id="@+id/greenbtn"
+    android:background="#4CAF50"/>
+
+
+
+</LinearLayout>
