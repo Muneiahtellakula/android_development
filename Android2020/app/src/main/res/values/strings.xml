@@ -79,4 +79,17 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string-array name="topic_names">
+        <item>Hello Toast</item>
+        <item>Text scrollview</item>
+        <item>Intent</item>
+        <item>Activity Life Cycle</item>
+        <item>Menus</item>
+        <item>Input Controls</item>
+        <item>Recyclerview</item>
+        <item>Internet Connection</item>
+        <item>Broadcast Recivers</item>
+        <item>Work Manager</item>
+        <item>Room DataBase</item>
+    </string-array>
 </resources>
