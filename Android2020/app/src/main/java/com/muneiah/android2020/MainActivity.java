@@ -24,8 +24,7 @@ public class MainActivity extends AppCompatActivity {
 
     private AppBarConfiguration mAppBarConfiguration;
 MyReceiver mReceiver;
-    MainAdapter mainAdapter;
-    String tit[];
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,8 +42,7 @@ MyReceiver mReceiver;
                         .setAction("Action", null).show();
             }
         });
-        tit=getResources().getStringArray(R.array.topic_names);
-        mainAdapter=new MainAdapter(MainActivity.this,tit);
+
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
         // Passing each menu ID as a set of Ids because each

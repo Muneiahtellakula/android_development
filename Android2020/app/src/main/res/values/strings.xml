@@ -80,16 +80,20 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string-array name="topic_names">
-        <item>Hello Toast</item>
-        <item>Text scrollview</item>
-        <item>Intent</item>
-        <item>Activity Life Cycle</item>
-        <item>Menus</item>
-        <item>Input Controls</item>
-        <item>Recyclerview</item>
-        <item>Internet Connection</item>
-        <item>Broadcast Recivers</item>
-        <item>Work Manager</item>
-        <item>Room DataBase</item>
+        <item>0.Hello Toast</item>
+        <item>1.Text scrollview</item>
+        <item>2.Intent</item>
+        <item>3.Activity Life Cycle</item>
+        <item>4.Menus</item>
+        <item>5.Input Controls</item>
+        <item>6.Navigation Components</item>
+        <item>7.Navigation Drawer</item>
+        <item>8.Tab Navigation</item>
+        <item>9.Input Controls</item>
+        <item>10.Recyclerview</item>
+        <item>11.Internet Connection</item>
+        <item>12.Broadcast Recivers</item>
+        <item>13.Work Manager</item>
+        <item>14.Room DataBase</item>
     </string-array>
 </resources>
