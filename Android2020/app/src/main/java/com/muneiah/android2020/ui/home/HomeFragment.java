@@ -27,6 +27,7 @@ import com.muneiah.android2020.NavigationComponent.NavigationActivity;
 import com.muneiah.android2020.R;
 import com.muneiah.android2020.RecyclerView.RecyclerViewDemo;
 import com.muneiah.android2020.SharedPrefarences.LoginActivity;
+import com.muneiah.android2020.TabNavigation.TabNavActivity;
 import com.muneiah.android2020.text_and_scrollView.TextAndScrollViewActivity;
 
 public class HomeFragment extends Fragment {
@@ -179,6 +180,10 @@ MainAdapter adapter;
                             case 7:
                                 Intent nav_drawe=new Intent(getContext(), MainActivity.class);
                                 getContext().startActivity(nav_drawe);
+                                break;
+                            case 8:
+                                Intent tabNav=new Intent(getContext(), TabNavActivity.class);
+                                getContext().startActivity(tabNav);
                                 break;
                             case 9:
                                 Intent inputcontroller=new Intent(getContext(), InputControlActivity.class);
