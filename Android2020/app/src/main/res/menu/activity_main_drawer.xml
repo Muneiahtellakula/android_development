@@ -17,4 +17,21 @@
             android:icon="@drawable/ic_menu_slideshow"
             android:title="@string/menu_slideshow" />
     </group>
+    <item android:id="@+id/settings"
+        android:icon="@android:drawable/ic_menu_send"
+        android:title="Settings">
+        <menu>
+            <item
+                android:title="share"
+                android:id="@+id/share"
+                android:icon="@android:drawable/ic_menu_share">
+            </item>
+            <item android:title="Rating"
+                android:id="@+id/rating"
+                android:icon="@android:drawable/star_on">
+
+            </item>
+
+        </menu>
+    </item>
 </menu>
