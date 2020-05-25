@@ -35,8 +35,210 @@
 
 <img src="https://github.com/Muneiahtellakula/android_development/blob/master/frg_1.JPG">
 
-**The files like below**
+**The files like below :Same like above process to create another two fragments**
 
 <img src="https://github.com/Muneiahtellakula/android_development/blob/master/pjt_structre.JPG">
+
+#### activity.xml file
+
+``` xml
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    
+<com.google.android.material.tabs.TabLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:tabTextColor="@android:color/white"
+    android:id="@+id/tab_layout"
+    android:background="@color/colorPrimary"
+    />
+    <androidx.viewpager.widget.ViewPager
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/viewPage"/>
+
+</LinearLayout>
+
+```
+
+#### MainActivity.java file
+
+```Java
+package com.muneiah.tablayoutdemoactivity;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentPagerAdapter;
+import androidx.viewpager.widget.ViewPager;
+
+import android.os.Bundle;
+import android.widget.Toast;
+
+import com.google.android.material.tabs.TabLayout;
+
+public class MainActivity extends AppCompatActivity {
+
+   //Inisilize the views
+    TabLayout tabLayout;
+    ViewPager viewPager;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        //connect the view id's from layout
+        tabLayout = findViewById(R.id.tab_layout);
+        viewPager = findViewById(R.id.viewPage);
+        //for viewpager set the adapter
+        viewPager.setAdapter(new MyFragmentViewPager(getSupportFragmentManager()));
+        tabLayout.setupWithViewPager(viewPager);
+        //tab selcet listenter
+        tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+            @Override
+            public void onTabSelected(TabLayout.Tab tab) {
+                Toast.makeText(MainActivity.this, "selected " + tab.getText().toString(), Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onTabUnselected(TabLayout.Tab tab) {
+                Toast.makeText(MainActivity.this, "un-selected " + tab.getText().toString(), Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onTabReselected(TabLayout.Tab tab) {
+                Toast.makeText(MainActivity.this, "re-selected " + tab.getText().toString(), Toast.LENGTH_SHORT).show();
+            }
+        });
+
+
+    }
+
+    //Creating new Inner classs for adapter
+    public class MyFragmentViewPager extends FragmentPagerAdapter {
+        String titles[] = {"Chats","Status","Calls"};
+
+        public MyFragmentViewPager(@NonNull FragmentManager fm) {
+            super(fm);
+        }
+
+        //getting tabs/fragments possions
+        @NonNull
+        @Override
+        public Fragment getItem(int position) {
+            if (position == 0) {
+                return new ChatFragment();
+            }
+            if (position == 1) {
+                return new StatusFragment();
+            }
+            if (position == 2) {
+                return new CallsFragment();
+            }
+            return null;
+        }
+
+        //size of the tabs
+        @Override
+        public int getCount() {
+            return titles.length;
+        }
+
+        //for tabpage titiles
+        @Nullable
+        @Override
+        public CharSequence getPageTitle(int position) {
+            return titles[position];
+        }
+    }
+}
+
+
+```
+#### fragment_chart.xml
+
+```xml
+
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ChatFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="Chat Fragment"
+        android:gravity="center"
+        android:textSize="30sp"/>
+
+</LinearLayout>
+
+```
+
+#### Chat_fragment.java
+
+```java
+package com.muneiah.tablayoutdemoactivity;
+
+import android.os.Bundle;
+
+import androidx.fragment.app.Fragment;
+
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+
+
+/**
+ * A simple {@link Fragment} subclass.
+ */
+public class ChatFragment extends Fragment {
+
+    public ChatFragment() {
+        // Required empty public constructor
+    }
+
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        // Inflate the layout for this fragment
+        return inflater.inflate(R.layout.fragment_chat, container, false);
+    }
+}
+
+
+````
+
+**same remaining two fragments**
+
+## Run the App
+
+## Output Screen
+
+<img src="https://github.com/Muneiahtellakula/android_development/blob/master/tabNavPractical.png" width="600" height="600">
+
+
+## Thank You..!
+
+
+
+
+
+
 
 
