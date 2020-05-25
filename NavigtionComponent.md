@@ -45,10 +45,8 @@
     //For navigation components 
 
 apply plugin: 'com.android.application'
-apply plugin: 'kotlin-android'
-apply plugin: 'kotlin-android-extensions'
-//For navigation components
-apply plugin: "androidx.navigation.safeargs.kotlin"
+//For navigation components safe arg for java
+apply plugin: "androidx.navigation.safeargs"
 android {
     compileSdkVersion 29
     buildToolsVersion "29.0.3"
@@ -68,20 +66,15 @@ android {
     }
 }
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-    implementation 'androidx.appcompat:appcompat:1.1.0'
-    implementation 'androidx.core:core-ktx:1.2.0'
     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
-    def nav_version = "2.3.0-alpha05"
-    //For navigation components
-   // Kotlin
-    implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
-    implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
+    // Java language implementation For navigation components main dependencies
+    def nav_version = "2.3.0-alpha06"
+    implementation "androidx.navigation:navigation-fragment:$nav_version"
+    implementation "androidx.navigation:navigation-ui:$nav_version"
 }
 ```
 #### Step 3:Add the following dependencies to your app's build.gradle file:(project level ) 
@@ -97,9 +90,9 @@ buildscript {
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.6.1'
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
-        def nav_version = "2.3.0-alpha05"
+        
+        //for java safe-args depen
+        def nav_version = "2.3.0-alpha06"
         classpath "androidx.navigation:navigation-safe-args-gradle-plugin:$nav_version"
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
@@ -177,7 +170,7 @@ task clean(type: Delete) {
 
 </FrameLayout>  
   ```
-  #### note:Same as remaing two fragments design 
+  #### note:Same as remaing two fragments design naming fragment_second.xml and fragment_third.xml 
   
   ** Create a new fragemt naming as Home_fragement for constant 
   ** home_fragemt.xml **
@@ -279,6 +272,8 @@ task clean(type: Delete) {
 
  #### Step 8:At Home_Fragemt.kt connct the three buttons id's then set onClick event listner 
  
+ * no modifications in First_fragment.kt,Second_fragment.kt and Third_Fragment.kt
+ 
  #### First_fragment.kt
  ``` Kotlin
       package com.muneiah.mynavcomponentdemo
@@ -363,6 +358,70 @@ class HomeFragment : Fragment() {
 
 }
 ```
+
+## For Java Home_Fragment.java file
+``` java
+
+import android.os.Bundle;
+
+import androidx.fragment.app.Fragment;
+import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
+
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.Button;
+
+import com.muneiah.android2020.R;
+
+/**
+ * A simple {@link Fragment} subclass.
+ */
+public class NavigationHomeFragment extends Fragment {
+
+    public NavigationHomeFragment() {
+        // Required empty public constructor
+    }
+
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        // Inflate the layout for this fragment
+        View view= inflater.inflate(R.layout.fragment_navigation_home, container, false);
+        Button flgred=view.findViewById(R.id.redbtn);
+        Button grnred=view.findViewById(R.id.greenbtn);
+        Button whired=view.findViewById(R.id.whitbtn);
+        flgred.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Navigation.findNavController(v).navigate(R.id.action_navigationHomeFragment_to_redFragment);
+            }
+        });
+        grnred.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Navigation.findNavController(v).navigate(R.id.action_navigationHomeFragment_to_greenFragment);
+            }
+        });
+
+        whired.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Navigation.findNavController(v).navigate(R.id.action_navigationHomeFragment_to_whiteFragment);
+            }
+        });
+        return view;
+    }
+}
+
+
+```
+
+
+
+
   #### Step 9:Run your application
   
   #                Thank you.....!
