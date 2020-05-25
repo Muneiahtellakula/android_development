@@ -1,7 +1,18 @@
-## Tab Navigation
+## Lateral Navigation:
+ * Lateral navigation is **navigation between sibling screens in the application's screen hierarchy** (sometimes referred to as a screen map). The most prominent lateral navigation patterns are tabs and horizontal paging (also known as swipe views). This pattern and others are described in Designing Effective Navigation. **For Example Tab Navigation**
+    
+    * Between siblings
+    * From a list of stories to a list in a different tab
+    * From story to story under the same tab
+    
+    <img src="https://github.com/Muneiahtellakula/android_development/blob/master/latralNav.JPG">
 
+### Tab Navigation
+   
 
 * Here we will see how to use another of the design library components, the TabLayout, which can be combined with the ViewPager class to create a tab based interface within an Android activity.
+
+
 #### An Introduction to the ViewPager
 * Although not part of the design support library, the ViewPager is a useful companion class when used in conjunction with the TabLayout component to implement a tabbed user interface. The primary role of the ViewPager is to allow the user to flip through different pages of information where each page is most typically represented by a layout fragment. The fragments that are associated with the ViewPager are managed by an instance of the FragmentPagerAdapter class.
 
