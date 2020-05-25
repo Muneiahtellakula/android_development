@@ -45,7 +45,7 @@
 5. Manage screen views in fragments
 6. Set a listener to determine which tab is tapped
 
-###Let's Start with Practical 
+### Let's Start with Practical 
 
 ### Creating the TabLayoutDemo Project
 
