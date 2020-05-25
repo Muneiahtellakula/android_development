@@ -10,7 +10,10 @@
 #### An Overview of the TabLayout Component
 
 * TabLayout is one of the components introduced as part of material design and is included in the design support library. The purpose of the TabLayout is to present the user with a row of tabs which can be selected to display different pages to the user. 
-* The tabs can be fixed or scrollable, whereby the user can swipe left or right to view more tabs than will currently fit on the display. * The information displayed on a tab can be text-based, an image or a combination of text and images.
+* The tabs can be fixed or scrollable, whereby the user can swipe left or right to view more tabs than will currently fit on the display. 
+* The information displayed on a tab can be text-based, an image or a combination of text and images.like below fig:
+
+<img src="https://github.com/Muneiahtellakula/android_development/blob/master/navbar.JPG">
 
 
 
@@ -28,9 +31,12 @@
 
 ```
 #### Creating the First Fragment
-* Each of the tabs on the TabLayout will display a different fragment when selected. Create the first of these fragments by right-clicking on the app -> java -> your package entry in the Project tool window and selecting the New -> Fragment -> Fragment (Blank) option. In the resulting dialog, enter Tab1Fragment into the Fragment Name: field and fragment_tab1 into the Fragment Layout Name: field. Enable the Create layout XML? option and disable both the Include fragment factory methods? and **Uncheck Include interface callbacks?** options before clicking on the Finish button to create the new fragment:
+* Each of the tabs on the TabLayout will display a different fragment when selected. Create the first of these fragments by right-clicking on the app -> java -> your package entry in the Project tool window and selecting the New -> Fragment -> Fragment (Blank) option. In the resulting dialog, enter Tab1Fragment into the Fragment Name: field and fragment_tab1 into the Fragment Layout Name: field. Enable the Create layout XML? option and disable both the Include fragment factory methods? and **Uncheck Include interface callbacks?** options before clicking on the Finish button to create the new fragment:Follow fig:
 
+<img src="https://github.com/Muneiahtellakula/android_development/blob/master/frg_1.JPG">
 
+**The files like below**
 
+<img src="https://github.com/Muneiahtellakula/android_development/blob/master/pjt_structre.JPG">
 
 
