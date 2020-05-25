@@ -47,5 +47,19 @@ If you are new to Android development, you might have read up about activity and
 
 **A fragment, on the other hand, doesn’t get automatically added into the back stack. For a fragment to be added into the back stack, the host activity must explicitly request for the instance to be saved by calling addToBackStack during a transaction that removes the fragment.**
 
- 
+### Finally I'm given conclusion 
+
+Main Differences between Activity and Fragment
+
+1. Activity is an application component that gives a user interface where the user can interact. The fragment is a part of an activity,  which contributes its own UI to that activity.
+2. For Tablet or if mobile is in landscape then Using fragment we can show two lists like the only list for show the state name and other lists will show the state description in single activity but using Activity we can't do the same thing.
+3. Activity is not dependent on fragment.but The fragment is dependent on Activity, it can't exist independently.
+4. without using fragment in Activity we can't create multi-pane UI. but using multiple fragments in a single activity we can create multi-pane UI.
+5. If we create a project using only Activity then its difficult to manage but if we use fragments then the project structure will be good and we can handle it easily.
+6. An activity may contain 0 or multiple numbers of fragments. A fragment can be reused in multiple activities, so it acts like a reusable component in activities.
+7. The activity has own life cycle but fragment has there own life cycle.
+8. For Activity, we just need to mention in Manifest but for fragment its not required.
+9. Activity a lot of memory used and the fragment is non-memory used.
+10. Activity is not lite weight. The fragment is the lite weight.
+
 
