@@ -25,6 +25,7 @@ If you are new to Android development, you might have read up about activity and
 
 **A fragment must always be hosted in an activity and a fragment’s lifecycle is directly affected by the host activity’s lifecycle. For example, when an activity resumes so will all of its fragments and when the activity pauses so will all of the fragments. However, while an activity is running (resumed lifecycle state), you can freely manipulate the state of a fragment, such as add or remove them. Another way to look at it is that when a fragment changes state it doesn’t affect the activity, but when the activity changes state it does affect the fragment.**
 
+<img src="https://github.com/Muneiahtellakula/android_development/blob/master/actiity_fragmentCallbacks.JPG">
 
 **Activity and fragments operate under the one-to-many relationship. That is, you can have one activity and host many fragments on top of it. The opposite case does not hold true. In fact, a fragment can’t exist without an activity to be the host.**
 
