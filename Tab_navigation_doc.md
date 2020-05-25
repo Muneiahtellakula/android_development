@@ -230,7 +230,7 @@ public class ChatFragment extends Fragment {
 
 ## Output Screen
 
-<img src="https://github.com/Muneiahtellakula/android_development/blob/master/tabNavPractical.png" width="600" height="600">
+<img src="https://github.com/Muneiahtellakula/android_development/blob/master/tabNavPractical.gif">
 
 
 ## Thank You..!
