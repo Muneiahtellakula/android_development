@@ -6,6 +6,15 @@
     * From story to story under the same tab
     
     <img src="https://github.com/Muneiahtellakula/android_development/blob/master/latralNav.JPG">
+### Benefits of using tabs and swipes
+* A single, initially-selected tab—users have access to content without further navigation
+* Navigate between related screens without visiting parent
+### Best practices with tabs
+* Lay out horizontally
+* Run along top of screen
+* Persistent across related screens
+ Switching should not be treated as history
+
 
 ### Tab Navigation
    
@@ -27,6 +36,16 @@
 <img src="https://github.com/Muneiahtellakula/android_development/blob/master/navbar.JPG">
 
 
+## Steps for implementing tabs
+
+1. Define the tab layout using TabLayout
+2. Implement a fragment and its layout for each tab
+3. Implement a PagerAdapter from FragmentPagerAdapter  or FragmentStatePagerAdapter
+4. Create an instance of the tab layout
+5. Manage screen views in fragments
+6. Set a listener to determine which tab is tapped
+
+###Let's Start with Practical 
 
 ### Creating the TabLayoutDemo Project
 
