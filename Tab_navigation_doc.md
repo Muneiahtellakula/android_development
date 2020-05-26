@@ -55,7 +55,7 @@
 3. Continue through the configuration screens requesting the creation of a **Empty Activity** named **TabLayoutDemoActivity** with a corresponding layout file named activity_tab_layout_demo. Click on the Finish button to initiate the project creation process.
 
 4. Once the project has been created, load the content_tab_layout_demo.xml file into the Layout Editor tool, select “Hello World” TextView object, and then delete it.
-5. Add the balow dependancy at build.gradle(app:Module)
+5. Add the below dependancy at build.gradle(app:Module)
 ```
     implementation 'com.android.support:design:28.0.0'
 
