@@ -49,7 +49,7 @@ If you are new to Android development, you might have read up about activity and
 
 ### Finally I'm given conclusion 
 
-Main Differences between Activity and Fragment
+#### Main Differences between Activity and Fragment
 
 1. Activity is an application component that gives a user interface where the user can interact. The fragment is a part of an activity,  which contributes its own UI to that activity.
 2. For Tablet or if mobile is in landscape then Using fragment we can show two lists like the only list for show the state name and other lists will show the state description in single activity but using Activity we can't do the same thing.
