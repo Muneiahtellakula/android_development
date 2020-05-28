@@ -1,7 +1,27 @@
-## Tab Navigation
+## Lateral Navigation:
+ * Lateral navigation is **navigation between sibling screens in the application's screen hierarchy** (sometimes referred to as a screen map). The most prominent lateral navigation patterns are tabs and horizontal paging (also known as swipe views). This pattern and others are described in Designing Effective Navigation. **For Example Tab Navigation**
+    
+    * Between siblings
+    * From a list of stories to a list in a different tab
+    * From story to story under the same tab
+    
+    <img src="https://github.com/Muneiahtellakula/android_development/blob/master/latralNav.JPG">
+### Benefits of using tabs and swipes
+* A single, initially-selected tab—users have access to content without further navigation
+* Navigate between related screens without visiting parent
+### Best practices with tabs
+* Lay out horizontally
+* Run along top of screen
+* Persistent across related screens
+ Switching should not be treated as history
 
+
+### Tab Navigation
+   
 
 * Here we will see how to use another of the design library components, the TabLayout, which can be combined with the ViewPager class to create a tab based interface within an Android activity.
+
+
 #### An Introduction to the ViewPager
 * Although not part of the design support library, the ViewPager is a useful companion class when used in conjunction with the TabLayout component to implement a tabbed user interface. The primary role of the ViewPager is to allow the user to flip through different pages of information where each page is most typically represented by a layout fragment. The fragments that are associated with the ViewPager are managed by an instance of the FragmentPagerAdapter class.
 
@@ -16,6 +36,16 @@
 <img src="https://github.com/Muneiahtellakula/android_development/blob/master/navbar.JPG">
 
 
+## Steps for implementing tabs
+
+1. Define the tab layout using TabLayout
+2. Implement a fragment and its layout for each tab
+3. Implement a PagerAdapter from FragmentPagerAdapter  or FragmentStatePagerAdapter
+4. Create an instance of the tab layout
+5. Manage screen views in fragments
+6. Set a listener to determine which tab is tapped
+
+### Let's Start with Practical 
 
 ### Creating the TabLayoutDemo Project
 
@@ -25,7 +55,7 @@
 3. Continue through the configuration screens requesting the creation of a **Empty Activity** named **TabLayoutDemoActivity** with a corresponding layout file named activity_tab_layout_demo. Click on the Finish button to initiate the project creation process.
 
 4. Once the project has been created, load the content_tab_layout_demo.xml file into the Layout Editor tool, select “Hello World” TextView object, and then delete it.
-5. Add the balow dependancy at build.gradle(app:Module)
+5. Add the below dependancy at build.gradle(app:Module)
 ```
     implementation 'com.android.support:design:28.0.0'
 
@@ -231,6 +261,9 @@ public class ChatFragment extends Fragment {
 ## Output Screen
 
 <img src="https://github.com/Muneiahtellakula/android_development/blob/master/tabNavPractical.gif">
+
+
+
 
 
 ## Thank You..!
