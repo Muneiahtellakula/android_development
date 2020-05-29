@@ -82,7 +82,7 @@ dependencies {
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 
 buildscript {
-    ext.kotlin_version = '1.3.61'
+  
     repositories {
         google()
         jcenter()
@@ -152,7 +152,7 @@ task clean(type: Delete) {
    
   <img src="https://github.com/Muneiahtellakula/kotlin-ref/blob/master/MyNavComponentDemo/final_navi_graph_dessti.jpg?raw=true"/>
   
-  #### Step 6:Create three blank fragments(both xml and kotlin)
+  #### Step 6:Create three blank fragments(both xml and Java)
  
  * Right click on Java first package then new/fragment/fragment_blank
  
@@ -275,7 +275,7 @@ task clean(type: Delete) {
  * no modifications in First_fragment.kt,Second_fragment.kt and Third_Fragment.kt
  
  #### First_fragment.kt
- ``` Kotlin
+ ``` Java
       package com.muneiah.mynavcomponentdemo
 
      import android.os.Bundle
