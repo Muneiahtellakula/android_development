@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <LinearLayout
     android:orientation="vertical"
     android:weightSum="10"
@@ -9,16 +10,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".HelloToast.Hello_Toast_Class">
-<Button
-    android:layout_width="match_parent"
-    android:layout_height="0dp"
-    android:layout_weight="1"
-    android:textColor="@android:color/white"
-    android:textSize="25sp"
-    android:onClick="showToast"
-    android:id="@+id/toastbtn"
-    android:background="@color/colorPrimary"
-    android:text="Toast"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:textColor="@android:color/white"
+        android:textSize="25sp"
+        android:onClick="showToast"
+        android:id="@+id/toastbtn"
+        android:background="@color/colorPrimary"
+        android:text="Toast"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="0dp"

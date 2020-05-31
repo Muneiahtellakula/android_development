@@ -95,5 +95,7 @@
         <item>12.Broadcast Recivers</item>
         <item>13.Work Manager</item>
         <item>14.Room DataBase</item>
+        <item>15.Data Binding</item>
+
     </string-array>
 </resources>

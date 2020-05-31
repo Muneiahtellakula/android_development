@@ -1,6 +1,5 @@
 package com.muneiah.android2020.ui.home;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -8,12 +7,9 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -22,11 +18,9 @@ import com.muneiah.android2020.HelloToast.Hello_Toast_Class;
 import com.muneiah.android2020.InputControls.InputControlActivity;
 import com.muneiah.android2020.Intents.IntentsActivity;
 import com.muneiah.android2020.MainActivity;
-import com.muneiah.android2020.MainAdapter;
 import com.muneiah.android2020.NavigationComponent.NavigationActivity;
 import com.muneiah.android2020.R;
 import com.muneiah.android2020.RecyclerView.RecyclerViewDemo;
-import com.muneiah.android2020.SharedPrefarences.LoginActivity;
 import com.muneiah.android2020.TabNavigation.TabNavActivity;
 import com.muneiah.android2020.text_and_scrollView.TextAndScrollViewActivity;
 
@@ -193,6 +187,10 @@ MainAdapter adapter;
                                 Intent recyclerview=new Intent(getContext(), RecyclerViewDemo.class);
                                 getContext().startActivity(recyclerview);
                                 break;
+                            case 15:
+                                /*Intent databinding=new Intent(getContext(), DataBindingActivity.class);
+                                getContext().startActivity(databinding);
+                                break;*/
                         }
                     }
                 });
