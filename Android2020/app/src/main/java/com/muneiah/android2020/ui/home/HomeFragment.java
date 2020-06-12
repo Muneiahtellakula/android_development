@@ -29,6 +29,7 @@ public class HomeFragment extends Fragment {
     private HomeViewModel homeViewModel;
 RecyclerView rv;
 MainAdapter adapter;
+TextView tv;
     String titiles[];
     public View onCreateView(@NonNull LayoutInflater inflater,
             ViewGroup container, Bundle savedInstanceState) {
@@ -42,6 +43,7 @@ MainAdapter adapter;
         final Button usrInput = root.findViewById(R.id.button_input);
         final Button sharedbtn = root.findViewById(R.id.button_Shared);
         final Button nav_btn = root.findViewById(R.id.button_navigation);*/
+       tv=root.findViewById(R.id.tv_data_intent);
         rv=root.findViewById(R.id.rec_main);
         titiles=getResources().getStringArray(R.array.topic_names);
         adapter=new MainAdapter(titiles);

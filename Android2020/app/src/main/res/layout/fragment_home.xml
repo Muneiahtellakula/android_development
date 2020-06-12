@@ -3,6 +3,14 @@
     android:layout_height="wrap_content"
     android:orientation="vertical"
     xmlns:android="http://schemas.android.com/apk/res/android" >
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:layout_gravity="center"
+        android:text="result"
+        android:textColor="@color/colorPrimary"
+        android:id="@+id/tv_data_intent"/>
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rec_main"
         android:layout_width="match_parent"
