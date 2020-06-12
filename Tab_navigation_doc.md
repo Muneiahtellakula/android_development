@@ -10,7 +10,7 @@
 * A single, initially-selected tab—users have access to content without further navigation
 * Navigate between related screens without visiting parent
 ### Best practices with tabs
-* Lay out horizontally
+* Layout horizontally
 * Run along top of screen
 * Persistent across related screens
  Switching should not be treated as history
