@@ -2,10 +2,28 @@
 
 See it in Activity Lifecycle [at Android Developers](https://developer.android.com/guide/components/activities/activity-lifecycle#:~:text=To%20navigate%20transitions%20between%20stages,activity%20enters%20a%20new%20state.)
 
+## Introduction
+* In this you learn about the activity lifecycle, the callback events you can implement to perform tasks in each stage of the lifecycle, and how to handle Activity instance states throughout the activity lifecycle.
 
+
+**About the activity lifecycle**
+The activity lifecycle is the set of states an activity can be in during its entire lifetime, from the time it's created to when it's destroyed and the system reclaims its resources. As the user interacts with your app and other apps on the device, activities move into different states.
+
+**For example:**
+
+* When you start an app, the app's main activity ("Activity 1" in the figure below) is started, comes to the foreground, and receives the user focus.
+* When you start a second activity ("Activity 2" in the figure below), a new activity is created and started, and the main activity is stopped.
+* When you're done with the Activity 2 and navigate back, Activity 1 resumes. Activity 2 stops and is no longer needed.
+* If the user doesn't resume Activity 2, the system eventually destroys it. Activity lifecycle
+
+**Activity states and lifecycle callback methods**
+* When an Activity transitions into and out of the different lifecycle states as it runs, the Android system calls several lifecycle callback methods at each stage. All of the callback methods are hooks that you can override in each of your Activity classes to define how that Activity behaves when the user leaves and re-enters the Activity. Keep in mind that the lifecycle states (and callbacks) are per Activity, not per app, and you may implement different behavior at different points in the lifecycle of each Activity.
+
+
+
+## Enter image description here
 <img src="https://github.com/AP-Skill-Development-Corporation/Android-Students-Training-II-Batch-1/blob/master/activity_lifecycle.png?raw=true">
 
-**Acivity LyfeCycle flow description shows here**
 
 **onCreate():**
 
