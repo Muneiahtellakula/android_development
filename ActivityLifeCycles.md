@@ -1,6 +1,6 @@
 # Activity Lifecycles
 
-See it in Activity Lifecycle [at Android Developers](https://developer.android.com/guide/components/activities/activity-lifecycle#:~:text=To%20navigate%20transitions%20between%20stages,activity%20enters%20a%20new%20state.)
+* See it in Activity Lifecycle [at Android Developers](https://developer.android.com/guide/components/activities/activity-lifecycle#:~:text=To%20navigate%20transitions%20between%20stages,activity%20enters%20a%20new%20state.)
 
 ## Introduction
 * In this you learn about the activity lifecycle, the callback events you can implement to perform tasks in each stage of the lifecycle, and how to handle Activity instance states throughout the activity lifecycle.
@@ -19,11 +19,9 @@ The activity lifecycle is the set of states an activity can be in during its ent
 **Activity states and lifecycle callback methods**
 * When an Activity transitions into and out of the different lifecycle states as it runs, the Android system calls several lifecycle callback methods at each stage. All of the callback methods are hooks that you can override in each of your Activity classes to define how that Activity behaves when the user leaves and re-enters the Activity. Keep in mind that the lifecycle states (and callbacks) are per Activity, not per app, and you may implement different behavior at different points in the lifecycle of each Activity.
 
-
-
-## Enter image description here
 <img src="https://github.com/AP-Skill-Development-Corporation/Android-Students-Training-II-Batch-1/blob/master/activity_lifecycle.png?raw=true">
 
+**This figure shows each of the Activity states and the callback methods that occur as the Activity transitions between different states:**
 
 **onCreate():**
 
