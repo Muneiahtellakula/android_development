@@ -89,7 +89,7 @@ onDestroy()
 **Sample activity to understand the life cycle**
 
 ## Implenting Acivity LifeCycles 
-**Step 1:
+**Step 1:**
 ``` XML
 
 <?xml version="1.0" encoding="utf-8"?>
@@ -119,7 +119,7 @@ onDestroy()
 
 ```
 
-** Step :2
+**Step :2**
 ```
 import androidx.appcompat.app.AppCompatActivity;
 
