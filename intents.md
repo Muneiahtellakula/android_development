@@ -96,7 +96,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 # What are intents?
-[-] Android application components can connect to other Android applications. This connection is based on a task description represented by an Intent object.
+**Android application components can connect to other Android applications. This connection is based on a task description represented by an Intent object.**
 
 * Intents are asynchronous messages which allow application components to request functionality from other Android components. Intents allow you to interact with components from the same applications as well as with components contributed by other applications. For example, an activity can start an external activity for taking a picture.
 
