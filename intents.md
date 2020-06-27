@@ -101,3 +101,46 @@ public class MainActivity extends AppCompatActivity {
 * Intents are asynchronous messages which allow application components to request functionality from other Android components. Intents allow you to interact with components from the same applications as well as with components contributed by other applications. For example, an activity can start an external activity for taking a picture.
 
 * Intents are objects of the android.content.Intent type. Your code can send them to the Android system defining the components you are targeting. For example, via the startActivity() method you can define that the intent should be used to start an activity.
+
+**About intents**
+
+* Each activity is started or activated with an Intent, which is a message object that makes a request to the Android runtime to start an activity or other app component in your app or in some other app.
+
+* When your app is first started from the device home screen, the Android runtime sends an Intent to your app to start your app's main activity (the one defined with the MAIN action and the LAUNCHER category in the AndroidManifest.xml file). To start another activity in your app, or to request that some other activity available on the device perform an action, you build your own intent and call the startActivity() method to send the intent.
+
+* In addition to starting an activity, an intent can also be used to pass data between one activity and another. When you create an intent to start a new activity, you can include information about the data you want that new activity to operate on. So, for example, an email Activity that displays a list of messages can send an Intent to the Activity that displays that message. The display activity needs data about the message to display, and you can include that data in the intent.
+
+* In this chapter you learn about using intents with activities, but intents can also be used to start services or broadcast receivers. You learn how to use those app components in another practical.
+
+
+#### Intent types
+**Intents can be explicit or implicit:**
+
+**Explicit intent:** You specify the receiving activity (or other component) using the activity's fully qualified class name. You use explicit intents to start components in your own app (for example, to move between screens in the UI), because you already know the package and class name of that component.
+
+**Implicit intent:** You do not specify a specific activity or other component to receive the intent. Instead, you declare a general action to perform, and the Android system matches your request to an activity or other component that can handle the requested action. You learn more about using implicit intents in another practical.
+
+* Intent objects and fields
+* For an explicit Intent, the key fields include the following:
+
+* The Activity class (for an explicit Intent). This is the class name of the Activity or other component that should receive the Intent; for example, com.example.SampleActivity.class. Use the Intent constructor or the setComponent(), setComponentName(), or setClassName() methods to specify the class.
+
+* The Intent data. The Intent data field contains a reference to the data you want the receiving Activity to operate on as a Uri object.
+* Intent extras. These are key-value pairs that carry information the receiving Activity requires to accomplish the requested action.
+* Intent flags. These are additional bits of metadata, defined by the Intent class. The flags may instruct the Android system how to launch an Activity or how to treat it after it's launched.
+
+* For an implicit Intent, you may need to also define the Intent action and category. You learn more about Intent actions and categories in another chapter.
+
+
+#### Starting an Activity with an explicit Intent
+* To start a specific Activity from another Activity, use an explicit Intent and the startActivity() method. An explicit Intent includes the fully qualified class name for the Activity or other component in the Intent object. All the other Intent fields are optional, and null by default.
+
+* For example, if you want to start the ShowMessageActivity to show a specific message in an email app, use code like this:
+```
+Intent messageIntent = new Intent(this, ShowMessageActivity.class);
+startActivity(messageIntent);
+The intent constructor takes two arguments for an explicit Intent:
+```
+* An application context. In this example, the Activity class provides the context (this).
+* The specific component to start (ShowMessageActivity.class).
+* Use the startActivity() method with the new Intent object as the only argument. The startActivity() method sends the Intent to the Android system, which launches the ShowMessageActivity class on behalf of your app. The new Activity appears on the screen, and the originating Activity is paused.
