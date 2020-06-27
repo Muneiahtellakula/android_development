@@ -17,7 +17,7 @@ import com.muneiah.android2020.R;
 
 public class LoginActivity extends AppCompatActivity {
     TextInputLayout nam, pass;
-    SharedPreferences sharedPreferences;
+    public SharedPreferences sharedPreferences;
     TextInputEditText editText,pet;
     String mymob;
     String mypassword;

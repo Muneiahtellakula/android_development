@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@color/colorPrimary"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AlarmManger.AlarmActivity">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:onClick="play"
+        android:id="@+id/btn1"
+        android:layout_height="wrap_content"
+        android:background="@android:drawable/ic_media_play"/>
+    <Button
+        android:id="@+id/btn2"
+        android:layout_width="wrap_content"
+        android:onClick="pause"
+        android:layout_height="wrap_content"
+        android:background="@android:drawable/ic_media_pause"/>
+
+    <ToggleButton
+        android:id="@+id/tg"
+        android:layout_marginTop="70dp"
+        android:textSize="40sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textOn="Switch On"
+        android:textOff="Switch Off"
+        tools:layout_editor_absoluteX="197dp"
+        tools:layout_editor_absoluteY="186dp" />
+</LinearLayout>

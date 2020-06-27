@@ -96,6 +96,8 @@
         <item>13.Work Manager</item>
         <item>14.Room DataBase</item>
         <item>15.Data Binding</item>
+        <item>16.RecyclerView DiffUtil</item>
+        <item>17.Alarm service</item>
 
     </string-array>
 </resources>

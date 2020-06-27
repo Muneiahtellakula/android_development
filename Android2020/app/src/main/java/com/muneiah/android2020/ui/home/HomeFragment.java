@@ -14,12 +14,14 @@ import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.muneiah.android2020.AlarmManger.AlarmActivity;
 import com.muneiah.android2020.HelloToast.Hello_Toast_Class;
 import com.muneiah.android2020.InputControls.InputControlActivity;
 import com.muneiah.android2020.Intents.IntentsActivity;
 import com.muneiah.android2020.MainActivity;
 import com.muneiah.android2020.NavigationComponent.NavigationActivity;
 import com.muneiah.android2020.R;
+import com.muneiah.android2020.RecyclerDiffUtil.RecyclerDiffUtilActivity;
 import com.muneiah.android2020.RecyclerView.RecyclerViewDemo;
 import com.muneiah.android2020.TabNavigation.TabNavActivity;
 import com.muneiah.android2020.text_and_scrollView.TextAndScrollViewActivity;
@@ -193,6 +195,14 @@ TextView tv;
                                 /*Intent databinding=new Intent(getContext(), DataBindingActivity.class);
                                 getContext().startActivity(databinding);
                                 break;*/
+                            case 16:
+                                Intent diff=new Intent(getContext(), RecyclerDiffUtilActivity.class);
+                                getContext().startActivity(diff);
+                                break;
+                            case 17:
+                                Intent al=new Intent(getContext(), AlarmActivity.class);
+                                getContext().startActivity(al);
+                                break;
                         }
                     }
                 });
