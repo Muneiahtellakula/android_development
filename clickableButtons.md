@@ -60,8 +60,9 @@
   4. Click Next after choosing an icon, and click Finish to finish. The icon name should now appear in the app > res > drawable folder.
 #### Sample example
 
-**Here,Screen 1 have AndroidIcon symbol is ImageView and right mark is ImageButton .when it inisilzing time shows the black color 
-**Screen 2 :when click the ImageButton and Imageview It will change the Green color.If you click both then it change colors like Screen 3
+**Here,Screen 1 have AndroidIcon symbol is ImageView and right mark is ImageButton .when it inisilzing time shows the black color**
+
+**Screen 2 :when click the ImageButton and Imageview It will change the Green color.If you click both then it change colors like Screen 3**
 
 <img src="https://github.com/Muneiahtellakula/android_development/blob/master/img_btn_normal.PNG?raw=true">
 
