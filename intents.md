@@ -144,3 +144,194 @@ The intent constructor takes two arguments for an explicit Intent:
 * An application context. In this example, the Activity class provides the context (this).
 * The specific component to start (ShowMessageActivity.class).
 * Use the startActivity() method with the new Intent object as the only argument. The startActivity() method sends the Intent to the Android system, which launches the ShowMessageActivity class on behalf of your app. The new Activity appears on the screen, and the originating Activity is paused.
+
+#### For Implimenting The Activites And Intents Example Follow the code :
+
+**acivity_main.xml**
+``` XML
+
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Explicit Intent Example"
+    android:textSize="25sp"
+    android:gravity="center"
+    android:textColor="@color/colorPrimary"
+    android:layout_margin="10dp"
+    />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/et_user_input"
+        android:hint="Enter the data"
+        android:layout_margin="10dp"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="open Second screen"
+        android:onClick="show_secondActivity"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"
+            android:gravity="center"
+            android:textColor="@color/colorPrimary"
+            android:text="Implicit Intent "/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/et_web_input"
+            android:hint="Enter the url "/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="web"
+            android:id="@+id/webButton"
+            />
+
+    </LinearLayout>
+</LinearLayout>
+
+```
+
+**MainAcivity.java:**
+
+```Java
+package com.muneiah.intentstypetest;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
+import android.net.Uri;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+
+public class MainActivity extends AppCompatActivity {
+EditText et,et2;
+Button btn;
+public static final String KEY="apssdc.in";
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        et=findViewById(R.id.et_user_input);
+        et2=findViewById(R.id.et_web_input);
+        btn=findViewById(R.id.webButton);
+       btn.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View v) {
+               String input=et2.getText().toString();
+               Uri uri=Uri.parse("https://www."+input+".com");
+               Intent myintent=new Intent(Intent.ACTION_VIEW,uri);
+               startActivity(myintent);
+           }
+       });
+    }
+
+    public void show_secondActivity(View view) {
+        String data=et.getText().toString();
+        Intent int_obj=new Intent(this,SecondActivity.class);
+        int_obj.putExtra(KEY,data);
+        startActivity(int_obj);
+    }
+}
+
+
+```
+**AndroidManifest.xml**
+
+```
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.muneiah.intentstypetest">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".SecondActivity"
+            android:parentActivityName=".MainActivity"
+            ></activity>
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
+
+```
+**activity_secon.xml**
+```
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SecondActivity"
+    android:gravity="center"
+    android:background="@drawable/aplogos">
+    <!--for displaying the Data design TEXTVIEW -->
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/tv_result"
+    android:text="here displays Data"
+    android:textSize="40sp"
+
+    android:layout_margin="20sp"
+    android:layout_gravity="center"
+    />
+</LinearLayout>
+
+```
+**SecondActivity.java**
+
+```
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.widget.TextView;
+
+public class SecondActivity extends AppCompatActivity {
+TextView label;
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_second);
+        label=findViewById(R.id.tv_result);
+        /*Getting from activity useing getIntent()*/
+        Intent i=getIntent();
+       String d= i.getStringExtra(MainActivity.KEY);
+       label.setText(d);
+    }
+}
+
+```
