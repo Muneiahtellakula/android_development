@@ -60,6 +60,16 @@
   4. Click Next after choosing an icon, and click Finish to finish. The icon name should now appear in the app > res > drawable folder.
 #### Sample example
 
+**Here,Screen 1 have AndroidIcon symbol is ImageView and right mark is ImageButton .when it inisilzing time shows the black color 
+**Screen 2 :when click the ImageButton and Imageview It will change the Green color.If you click both then it change colors like Screen 3
+
+<img src="https://github.com/Muneiahtellakula/android_development/blob/master/img_btn_normal.PNG?raw=true">
+
+
+
+#### Project Directory Files info following 
+
+<img src="https://github.com/Muneiahtellakula/android_development/blob/master/pjtFiles.PNG?raw=true">
 
 **acivity_main.xml**
 ```
@@ -92,4 +102,65 @@
 
 </LinearLayout>
 ```
-   
+**button_actions.xml** new drawable resource file
+```
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/ic_android_green_24dp"
+        android:state_pressed="true" />
+    <item android:drawable="@drawable/ic_android_blue_24dp"
+        android:state_window_focused="true" />
+    <item android:drawable="@drawable/ic_android_black_24dp" />
+</selector>
+
+```
+**MainActivity.java**
+
+```
+package com.muneiah.imagebuttons;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.ImageButton;
+import android.widget.ImageView;
+import android.widget.Toast;
+
+public class MainActivity extends AppCompatActivity
+{
+ImageView iv;
+ImageButton ib;
+    @Override
+    protected void onCreate(Bundle savedInstanceState)
+    {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        iv=findViewById(R.id.image);
+        ib=findViewById(R.id.img_btn);
+
+        /*Imageview Clickable Event Handling */
+        iv.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+            iv.setImageResource(R.drawable.button_actions);
+                Toast.makeText(MainActivity.this, "Hello, I'm ImageView", Toast.LENGTH_SHORT).show();
+
+            }
+        });
+        /*ImageButton  Clickable Event Handling */
+        ib.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ib.setImageResource(R.drawable.button_actions);
+                Toast.makeText(MainActivity.this, "You clicked Image Button", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+    }
+}
+
+```
