@@ -38,6 +38,8 @@
 
 ## A Small Example here taking two components :
 
+<img src="https://github.com/Muneiahtellakula/android_development/blob/master/usrintr.png?raw=true">
+
 **activity_main.xml**
 
 ```
