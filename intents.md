@@ -86,6 +86,252 @@ public class MainActivity extends AppCompatActivity {
 #### Add another Activity to your project
 * The MainActivity for your app and its associated layout file is supplied by an Activity template in Android Studio such as Empty Activity or Basic Activity. You can add a new Activity to your project by choosing File > New > Activity. Choose the Activity template you want to use, or open the Gallery to see all the available templates.
 
+<img src="https://github.com/Muneiahtellakula/android_development/blob/master/activity-gallery.png" height="400" width="600">
+
+- When you choose an Activity template, you see the same set of screens for creating the new activity that you did when you created the project. Android Studio provides three things for each new activity in your app:
+
+* A Java file for the new Activity with a skeleton class definition and onCreate() method. The new Activity, like MainActivity, is a subclass of AppCompatActivity.
+* An XML file containing the layout for the new activity. Note that the setContentView() method in the Activity class inflates this new layout.
+* An additional <activity> element in the AndroidManifest.xml file that specifies the new activity. The second Activity definition does not include any Intent filters. If you plan to use this activity only within your app (and not enable that activity to be started by any other app), you do not need to add filters
 
 
 # What are intents?
+**Android application components can connect to other Android applications. This connection is based on a task description represented by an Intent object.**
+
+* Intents are asynchronous messages which allow application components to request functionality from other Android components. Intents allow you to interact with components from the same applications as well as with components contributed by other applications. For example, an activity can start an external activity for taking a picture.
+
+* Intents are objects of the android.content.Intent type. Your code can send them to the Android system defining the components you are targeting. For example, via the startActivity() method you can define that the intent should be used to start an activity.
+
+**About intents**
+
+* Each activity is started or activated with an Intent, which is a message object that makes a request to the Android runtime to start an activity or other app component in your app or in some other app.
+
+* When your app is first started from the device home screen, the Android runtime sends an Intent to your app to start your app's main activity (the one defined with the MAIN action and the LAUNCHER category in the AndroidManifest.xml file). To start another activity in your app, or to request that some other activity available on the device perform an action, you build your own intent and call the startActivity() method to send the intent.
+
+* In addition to starting an activity, an intent can also be used to pass data between one activity and another. When you create an intent to start a new activity, you can include information about the data you want that new activity to operate on. So, for example, an email Activity that displays a list of messages can send an Intent to the Activity that displays that message. The display activity needs data about the message to display, and you can include that data in the intent.
+
+* In this chapter you learn about using intents with activities, but intents can also be used to start services or broadcast receivers. You learn how to use those app components in another practical.
+
+
+#### Intent types
+**Intents can be explicit or implicit:**
+
+**Explicit intent:** You specify the receiving activity (or other component) using the activity's fully qualified class name. You use explicit intents to start components in your own app (for example, to move between screens in the UI), because you already know the package and class name of that component.
+
+**Implicit intent:** You do not specify a specific activity or other component to receive the intent. Instead, you declare a general action to perform, and the Android system matches your request to an activity or other component that can handle the requested action. You learn more about using implicit intents in another practical.
+
+* Intent objects and fields
+* For an explicit Intent, the key fields include the following:
+
+* The Activity class (for an explicit Intent). This is the class name of the Activity or other component that should receive the Intent; for example, com.example.SampleActivity.class. Use the Intent constructor or the setComponent(), setComponentName(), or setClassName() methods to specify the class.
+
+* The Intent data. The Intent data field contains a reference to the data you want the receiving Activity to operate on as a Uri object.
+* Intent extras. These are key-value pairs that carry information the receiving Activity requires to accomplish the requested action.
+* Intent flags. These are additional bits of metadata, defined by the Intent class. The flags may instruct the Android system how to launch an Activity or how to treat it after it's launched.
+
+* For an implicit Intent, you may need to also define the Intent action and category. You learn more about Intent actions and categories in another chapter.
+
+
+#### Starting an Activity with an explicit Intent
+* To start a specific Activity from another Activity, use an explicit Intent and the startActivity() method. An explicit Intent includes the fully qualified class name for the Activity or other component in the Intent object. All the other Intent fields are optional, and null by default.
+
+* For example, if you want to start the ShowMessageActivity to show a specific message in an email app, use code like this:
+```
+Intent messageIntent = new Intent(this, ShowMessageActivity.class);
+startActivity(messageIntent);
+The intent constructor takes two arguments for an explicit Intent:
+```
+* An application context. In this example, the Activity class provides the context (this).
+* The specific component to start (ShowMessageActivity.class).
+* Use the startActivity() method with the new Intent object as the only argument. The startActivity() method sends the Intent to the Android system, which launches the ShowMessageActivity class on behalf of your app. The new Activity appears on the screen, and the originating Activity is paused.
+
+#### For Implimenting The Activites And Intents Example Follow the code :
+
+**acivity_main.xml**
+``` XML
+
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Explicit Intent Example"
+    android:textSize="25sp"
+    android:gravity="center"
+    android:textColor="@color/colorPrimary"
+    android:layout_margin="10dp"
+    />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/et_user_input"
+        android:hint="Enter the data"
+        android:layout_margin="10dp"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="open Second screen"
+        android:onClick="show_secondActivity"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"
+            android:gravity="center"
+            android:textColor="@color/colorPrimary"
+            android:text="Implicit Intent "/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/et_web_input"
+            android:hint="Enter the url "/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="web"
+            android:id="@+id/webButton"
+            />
+
+    </LinearLayout>
+</LinearLayout>
+
+```
+
+**MainAcivity.java:**
+
+```Java
+package com.muneiah.intentstypetest;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
+import android.net.Uri;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+
+public class MainActivity extends AppCompatActivity {
+EditText et,et2;
+Button btn;
+public static final String KEY="apssdc.in";
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        et=findViewById(R.id.et_user_input);
+        et2=findViewById(R.id.et_web_input);
+        btn=findViewById(R.id.webButton);
+       btn.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View v) {
+               String input=et2.getText().toString();
+               Uri uri=Uri.parse("https://www."+input+".com");
+               Intent myintent=new Intent(Intent.ACTION_VIEW,uri);
+               startActivity(myintent);
+           }
+       });
+    }
+
+    public void show_secondActivity(View view) {
+        String data=et.getText().toString();
+        Intent int_obj=new Intent(this,SecondActivity.class);
+        int_obj.putExtra(KEY,data);
+        startActivity(int_obj);
+    }
+}
+
+
+```
+**AndroidManifest.xml**
+
+```
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.muneiah.intentstypetest">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".SecondActivity"
+            android:parentActivityName=".MainActivity"
+            ></activity>
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
+
+```
+**activity_secon.xml**
+```
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SecondActivity"
+    android:gravity="center"
+    android:background="@drawable/aplogos">
+    <!--for displaying the Data design TEXTVIEW -->
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/tv_result"
+    android:text="here displays Data"
+    android:textSize="40sp"
+
+    android:layout_margin="20sp"
+    android:layout_gravity="center"
+    />
+</LinearLayout>
+
+```
+**SecondActivity.java**
+
+```
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.widget.TextView;
+
+public class SecondActivity extends AppCompatActivity {
+TextView label;
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_second);
+        label=findViewById(R.id.tv_result);
+        /*Getting from activity useing getIntent()*/
+        Intent i=getIntent();
+       String d= i.getStringExtra(MainActivity.KEY);
+       label.setText(d);
+    }
+}
+
+```
