@@ -41,4 +41,55 @@
   1. Expand app > res in the Project > Android pane, and right-click (or Command-click) the drawable folder.
   2. Choose New > Image Asset. The Configure Image Asset dialog appears.
   
+   <img src="https://github.com/Muneiahtellakula/android_development/blob/master/as_configure_image_asset_01.png?raw=true" height=400 width=600>
   
+  3. Choose Action Bar and Tab Icons in the drop-down menu. (For a complete description of this dialog, see Create app icons with Image Asset Studio.)
+  4. Click the Clipart: image (the Android logo) to select a clip art image as the icon. A page of icons appears as shown below. Click the icon you want to use.
+      
+      <img src="https://github.com/Muneiahtellakula/android_development/blob/master/as_configure_image_asset_02.png?raw=true" height=400 width=600>
+  5. Optional: Choose HOLO_DARK from the Theme drop-down menu to set the icon to be white against a dark-colored or black background.
+
+  6. Optional: Depending on the shape of the icon, you may want to add padding to the icon so that the icon doesn't crowd the text. Drag the Padding slider to the right to add more padding.
+  7. Click Next, and then click Finish in the Confirm Icon Path dialog. The icon name should now appear in the app > res > drawable folder.
+  
+   **Vector images of a standard icon are automatically resized for different sizes of device displays. To choose vector images, follow these steps:**
+
+  1. Expand app > res in the Project > Android pane, and right-click (or Command-click) the drawable folder.
+  2. Choose New > Vector Asset for an icon that automatically resizes itself for each display.
+  3. The Vector Asset Studio dialog appears for a vector asset. Click the Material Icon radio button, and then click the Choose button to choose an icon from the Material    Design specification. (For a complete description of this dialog, see Add Multi-Density Vector Graphics.)
+  4. Click Next after choosing an icon, and click Finish to finish. The icon name should now appear in the app > res > drawable folder.
+#### Sample example
+
+
+**acivity_main.xml**
+```
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="top"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:id="@+id/image"
+        android:src="@drawable/ic_android_black_24dp"
+       />
+    <ImageButton
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:id="@+id/img_btn"
+        android:layout_gravity="center"
+        android:background="#fff"
+        android:layout_margin="20dp"
+        android:src="@drawable/ic_check_black_24dp"
+        />
+
+</LinearLayout>
+```
+   
