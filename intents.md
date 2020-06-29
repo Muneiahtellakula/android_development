@@ -149,17 +149,17 @@ The intent constructor takes two arguments for an explicit Intent:
 
 **Explicit Intent And Implicit Intent**
 
-**At screen 1:** Click the **OPEN SECOND SCREEN** Button it will navigates SecondActivity Screen Like Screen 2
+**At screen 1:** Click the **OPEN SECOND SCREEN** utton it will navigates SecondActivity Screen Like below Screen 2
 
-**At Screen 2:** Shows the Up navigaton also when click that, then it will open it's Parent Acitivity(i.e. MainActivity)
+**At Screen 2:** Shows the Up navigaton also when click thab, then it will open it's Parent Acitivity(i.e. MainActivity)
 
-**At Screen 3:** Now ,enter the web site name at second EditText field ..then click web button shows like Sceen 4
+**At Screen 3:** Now ,enter the web site name at second EditText field ..then click web button shows like below Sceen 4
 
-**At Screen 4:** Here, system os asiking to choose the destination ..here choosen crome ..it will open 4(a) screen
+**At Screen 4:** Here, system os asiking to choose the destination ..here choosen crome ..it will open below 4(a) screen
 
 <img src="https://github.com/Muneiahtellakula/android_development/blob/master/intents_output.png">
 
-**Data Passing Between Two activitys
+**Data Passing Between Two activitys**
 
 **At Screen 5:** Enter the some text at first EditText then click the OPEN SECOND SCREEN button that text will display on SecondActivity like Screen 6
 
