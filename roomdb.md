@@ -67,4 +67,7 @@ Android Support	|SQLite	|Room(semi-sql), GreenDAO, Realm
 
    * version = intValueForDBVersion is used to define the database version
    * entities = {EntityClassOne.class, ....} is used to define list of entities for database
+   
+### Room Architecture
   
+<img src="https://raw.githubusercontent.com/Muneiahtellakula/android_development/master/rmdb.PNG">
