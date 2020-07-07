@@ -18,7 +18,6 @@
 
 #### Introduction to Android storage mechanisms
 **Core data storage mechanisms**
-
 1. Key-Value pairs : SharedPreferences, An android framework API, which stores key-values pairs in an XML file under protected file system.
   * Data stored via SharedPreference can only be accessed within the app.
   * Can only store boolean, int, long, String and Set of String.
@@ -54,7 +53,7 @@ Android Support	|SQLite	|Room(semi-sql), GreenDAO, Realm
     * tableName attribute is used to define the name of the table
     * Every entity class must have at-least one Primary Key field, annotated with @PrimaryKey
     * Fields in entity class can be annotated with @ColumnInfo(name = “name_of_column”) annotation to give specific column names
-2. **DAO :** Data Access Object is either be an interface or an abstract class annotated with @Doa annotation, containing all the methods to define the operations to be performed on data. The methods can be annotated with
+2. **[DAO](https://developer.android.com/reference/androidx/room/Dao.html) :** Data Access Object is either be an interface or an abstract class annotated with @Doa annotation, containing all the methods to define the operations to be performed on data. The methods can be annotated with
 
     * @Query to retrieve data from database
     * @Insert to insert data into database
@@ -63,7 +62,7 @@ Android Support	|SQLite	|Room(semi-sql), GreenDAO, Realm
  
  **The result of SQLite queries are composed into cursor object, DAO methods abstract the conversion of cursor to Entity objects and vice-versa.**
 
-3. Database : Database is a container for tables. An abstract class annotated with @Database annotation is used to create a database with given name along with database version.
+3. **Database :** Database is a container for tables. An abstract class annotated with @Database annotation is used to create a database with given name along with database version.
 
    * version = intValueForDBVersion is used to define the database version
    * entities = {EntityClassOne.class, ....} is used to define list of entities for database
@@ -71,3 +70,29 @@ Android Support	|SQLite	|Room(semi-sql), GreenDAO, Realm
 ### Room Architecture
   
 <img src="https://raw.githubusercontent.com/Muneiahtellakula/android_development/master/rmdb.PNG">
+
+### Using the Architecture Components
+
+* There are a lot of steps to using the Architecture Components and implementing the recommended architecture. The most important thing is to create a mental model of what is going on, understanding how the pieces fit together and how the data flows. As you work through this codelab, don't just copy and paste the code, but try to start building that inner understanding.
+
+**What are the recommended Architecture Components?**
+
+* Here is a short introduction to the Architecture Components and how they work together. Note that this codelab focuses on a subset of the components, namely LiveData, ViewModel and Room. Each component is explained more as you use it.
+
+**This diagram shows a basic form of this architecture:**
+
+<img src="https://codelabs.developers.google.com/codelabs/android-room-with-a-view/img/a7da8f5ea91bac52.png">
+
+[Entity](https://developer.android.com/reference/androidx/room/Entity): Annotated class that describes a database table when working with Room.
+
+**SQLite database**: On device storage. The Room persistence library creates and maintains this database for you.
+
+[DAO](https://developer.android.com/reference/androidx/room/Dao.html): Data access object. A mapping of SQL queries to functions. When you use a DAO, you call the methods, and Room takes care of the rest.
+
+[Room database](https://developer.android.com/topic/libraries/architecture/room): Simplifies database work and serves as an access point to the underlying SQLite database (hides SQLiteOpenHelper). The Room database uses the DAO to issue queries to the SQLite database.
+
+**Repository**: Used to manage multiple data sources.
+
+[ViewModel](https://developer.android.com/topic/libraries/architecture/viewmodel): Acts as a communication center between the Repository (data) and the UI. The UI no longer needs to worry about the origin of the data. ViewModel instances survive Activity/Fragment recreation.
+
+[LiveData](https://developer.android.com/topic/libraries/architecture/livedata): A data holder class that can be observed. Always holds/caches the latest version of data, and notifies its observers when data has changed. LiveData is lifecycle aware. UI components just observe relevant data and don't stop or resume observation. LiveData automatically manages all of this since it's aware of the relevant lifecycle status changes while observing.
