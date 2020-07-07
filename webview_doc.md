@@ -64,6 +64,7 @@ webSettings.setJavaScriptEnabled(true);
 
 ### Steps to Create a simple app on Android WebView 
 
+
 **Step 1:Enable the Internet Permissions 
 
 **AndroidManifest.xml**
@@ -97,7 +98,7 @@ webSettings.setJavaScriptEnabled(true);
 
 
 ```
-**Step 2:**At design file design the userinterface components EditText,Button,And WebView 
+**Step 2:** At design file design the userinterface components EditText,Button,And WebView 
 
 **activity_main.xml**
 
@@ -150,7 +151,7 @@ webSettings.setJavaScriptEnabled(true);
 
 ```
 
-**Step -3:**Create new menu directory and new menu resourse file name as options_menu
+**Step -3:** Create new menu directory and new menu resourse file name as options_menu
 
 **options_menu.xml**
 ```
