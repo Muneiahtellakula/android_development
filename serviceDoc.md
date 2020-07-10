@@ -13,13 +13,12 @@
 
 * Started
 * Bound
-* Started
 
-**A service is started when an application component calls startService() method. Once started, a service can run in the background indefinitely, even if the component which is responsible for the start is destroyed. It is stopped by using the stopService() method. The service can also stop itself by calling the stopSelf() method.**
+**Started**
+*A service is started when an application component calls startService() method. Once started, a service can run in the background indefinitely, even if the component which is responsible for the start is destroyed. It is stopped by using the stopService() method. The service can also stop itself by calling the stopSelf() method.*
 
 **Bound**
-
-* A service is bound when an application component binds to it by calling bindService(). Bound service offers a client-server interface that allows components to interact with the service, send requests and, get results. It processes across inter-process communication (IPC). The client can unbind the service by calling the unbindService() method.
+*A service is bound when an application component binds to it by calling bindService(). Bound service offers a client-server interface that allows components to interact with the service, send requests and, get results. It processes across inter-process communication (IPC). The client can unbind the service by calling the unbindService() method.*
 
 <img src="https://raw.githubusercontent.com/Muneiahtellakula/android_development/master/android_services_started_bound_services_life_cycle.png">
 
