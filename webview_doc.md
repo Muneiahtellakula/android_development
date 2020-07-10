@@ -65,7 +65,7 @@ webSettings.setJavaScriptEnabled(true);
 ### Steps to Create a simple app on Android WebView 
 
 
-**Step 1:Enable the Internet Permissions 
+**Step 1:Enable the Internet Permissions**
 
 **AndroidManifest.xml**
 ```
