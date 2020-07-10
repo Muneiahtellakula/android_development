@@ -37,6 +37,7 @@ onDestroy()	| This method is called when the service is no longer used and is be
 
 **Implementation and declaration**
 * A service needs to be declared in the AndroidManifest.xml file and the implementing class must extend the Service class or one of its subclasses.
+* For Create service goto>Java Direcory>Right on First package >new >service> then give the class name.
 
 **The following code shows an example for a service declaration and its implementation.**
 
