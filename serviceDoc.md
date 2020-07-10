@@ -21,11 +21,11 @@
 
 * A service is bound when an application component binds to it by calling bindService(). Bound service offers a client-server interface that allows components to interact with the service, send requests and, get results. It processes across inter-process communication (IPC). The client can unbind the service by calling the unbindService() method.
 
-<img src="https://raw.githubusercontent.com/Muneiahtellakula/android_development/master/serv.PNG">
+<img src="https://raw.githubusercontent.com/Muneiahtellakula/android_development/master/android_services_started_bound_services_life_cycle.png">
 
-AssignmentsLifetime Access
-Android Services Tutorial : Methods
-There are a few methods using which you can easily perform operations on any application. Some of them are:
+**let’s discuss the different methods under the service class.**
+
+**There are a few methods using which you can easily perform operations on any application. Some of them are:**
 
 Method	| Description
 ---|---
