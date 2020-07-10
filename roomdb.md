@@ -14,7 +14,7 @@
 * Storage options for Android
 * SQL vs. No-SQL
 * Room Library basics
-* Using the Room Library to build a notepad app
+* Using the Room Library to build a app
 
 #### Introduction to Android storage mechanisms
 **Core data storage mechanisms**
@@ -68,3 +68,37 @@ Android Support	|SQLite	|Room(semi-sql), GreenDAO, Realm
    * version = intValueForDBVersion is used to define the database version
    * entities = {EntityClassOne.class, ....} is used to define list of entities for database
   
+### For Adding Dependancys :
+
+**At build.gradle file(app:module)
+```
+android{
+     compileOptions {
+        sourceCompatibility = 1.8
+        targetCompatibility = 1.8
+    }
+      dependencies{
+         // Room components
+    implementation "androidx.room:room-runtime:$rootProject.roomVersion"
+    annotationProcessor "androidx.room:room-compiler:$rootProject.roomVersion"
+    androidTestImplementation "androidx.room:room-testing:$rootProject.roomVersion"
+
+// Lifecycle components
+    implementation "androidx.lifecycle:lifecycle-extensions:$rootProject.archLifecycleVersion"
+    annotationProcessor "androidx.lifecycle:lifecycle-compiler:$rootProject.archLifecycleVersion"
+    implementation 'androidx.recyclerview:recyclerview:1.2.0-alpha04'
+      }
+}
+
+```
+
+**at build.gradle(project level)
+```
+ext {
+    roomVersion = '2.2.1'
+    archLifecycleVersion = '2.2.0'
+    coreTestingVersion = '2.1.0'
+    materialVersion = '1.0.0'
+}
+
+```
