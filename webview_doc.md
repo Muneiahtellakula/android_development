@@ -8,9 +8,9 @@
 
 ### Adding a WebView to your app
 
-**To add a WebView to your app, you can either include the <WebView> element in your activity layout, or set the entire Activity window as a WebView in onCreate().**
+* To add a WebView to your app, you can either include the <WebView> element in your activity layout, or set the entire Activity window as a WebView in onCreate().
 
-**Adding a WebView in the activity layout**
+
 
 **To add a WebViewto your app in the layout, add the following code to your activity's layout XML file:**
 ```
@@ -166,6 +166,284 @@ webSettings.setJavaScriptEnabled(true);
         app:showAsAction="always" />
 
 </menu>
+
+```package com.muneiah.androidwebview;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.app.ProgressDialog;
+import android.content.DialogInterface;
+import android.os.Bundle;
+import android.text.TextUtils;
+import android.view.KeyEvent;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.webkit.WebSettings;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
+import android.widget.EditText;
+import android.widget.LinearLayout;
+import android.widget.ProgressBar;
+import android.widget.Toast;
+
+public class MainActivity extends AppCompatActivity {
+    WebView mWebView;
+    EditText mEditText;
+    ProgressDialog progressDialog;
+    LinearLayout linearLayout;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        init();
+    }
+
+    //For inisilizing the all view ids form XML file
+    private void init() {
+        linearLayout = findViewById(R.id.layout_liner);
+        mWebView = findViewById(R.id.webview);
+        mEditText = findViewById(R.id.et_input);
+        progressDialog = new ProgressDialog(this);
+
+    }
+
+    //For Button view click event handling
+    public void showWebPage(View view) {
+        progressDialog.show();
+        String input = mEditText.getText().toString();
+        //if null value enter displays message
+        if (TextUtils.isEmpty(input)) {
+            Toast.makeText(this, "please enter the url ", Toast.LENGTH_SHORT).show();
+        } else {
+            mWebView.setWebViewClient(new CustomWebViewClient());
+            mWebView.loadUrl("https://www." + input);
+
+            mWebView.getSettings().setJavaScriptEnabled(true);
+            mWebView.getSettings().setCacheMode(WebSettings.LOAD_CACHE_ELSE_NETWORK);
+            mWebView.getSettings().setBuiltInZoomControls(true);
+            mWebView.setWebViewClient(new WebViewClient() {
+                @Override
+                public boolean shouldOverrideUrlLoading(WebView view, String url) {
+                    view.loadUrl(url);
+                    progressDialog.dismiss();
+                    return true;
+                }
+            });
+        }
+    }
+
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if ((keyCode == KeyEvent.KEYCODE_BACK) && mWebView.canGoBack()) {
+            mWebView.goBack();
+            return true;
+        } else if (keyCode == KeyEvent.KEYCODE_BACK) {
+            ConfirmExit();
+            return true;
+        }
+        return super.onKeyDown(keyCode, event);
+    }
+
+    //Adding some app close alert dialog
+    public void ConfirmExit() {
+        AlertDialog.Builder ad = new AlertDialog.Builder(MainActivity.this);
+        ad.setTitle("Are you sure..!");
+        ad.setMessage("Do you want close the Tab?");
+        ad.setCancelable(false);
+        ad.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int i) {
+                MainActivity.this.finish();
+
+            }
+        });
+        ad.setNegativeButton("No", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int i) {
+                dialog.dismiss();
+            }
+        });
+        ad.show();
+    }
+
+    //imlemnting option menu
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.options_menu, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    //option menu item click listeners implementing
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.action_Home:
+                linearLayout.setVisibility(View.GONE);
+                WebSettings webSetting1 = mWebView.getSettings();
+                webSetting1.setBuiltInZoomControls(true);
+                webSetting1.setJavaScriptEnabled(true);
+                mWebView.setWebViewClient(new WebViewClient());
+                mWebView.loadUrl("https://www.google.com");
+                break;
+
+        }
+        return super.onOptionsItemSelected(item);
+
+    }
+    private class CustomWebViewClient extends WebViewClient{
+        @Override
+        public boolean shouldOverrideUrlLoading(WebView view, String url) {
+            view.loadUrl(url);
+            return true;
+        }
+    }
+}
+
+
+
+```
+**Step 4:MainActivity.java**
+```
+package com.muneiah.androidwebview;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.app.ProgressDialog;
+import android.content.DialogInterface;
+import android.os.Bundle;
+import android.text.TextUtils;
+import android.view.KeyEvent;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.webkit.WebSettings;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
+import android.widget.EditText;
+import android.widget.LinearLayout;
+import android.widget.ProgressBar;
+import android.widget.Toast;
+
+public class MainActivity extends AppCompatActivity {
+    WebView mWebView;
+    EditText mEditText;
+    ProgressDialog progressDialog;
+    LinearLayout linearLayout;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        init();
+    }
+
+    //For inisilizing the all view ids form XML file
+    private void init() {
+        linearLayout = findViewById(R.id.layout_liner);
+        mWebView = findViewById(R.id.webview);
+        mEditText = findViewById(R.id.et_input);
+        progressDialog = new ProgressDialog(this);
+
+    }
+
+    //For Button view click event handling
+    public void showWebPage(View view) {
+        progressDialog.show();
+        String input = mEditText.getText().toString();
+        //if null value enter displays message
+        if (TextUtils.isEmpty(input)) {
+            Toast.makeText(this, "please enter the url ", Toast.LENGTH_SHORT).show();
+        } else {
+            mWebView.setWebViewClient(new CustomWebViewClient());
+            mWebView.loadUrl("https://www." + input);
+
+            mWebView.getSettings().setJavaScriptEnabled(true);
+            mWebView.getSettings().setCacheMode(WebSettings.LOAD_CACHE_ELSE_NETWORK);
+            mWebView.getSettings().setBuiltInZoomControls(true);
+            mWebView.setWebViewClient(new WebViewClient() {
+                @Override
+                public boolean shouldOverrideUrlLoading(WebView view, String url) {
+                    view.loadUrl(url);
+                    progressDialog.dismiss();
+                    return true;
+                }
+            });
+        }
+    }
+
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if ((keyCode == KeyEvent.KEYCODE_BACK) && mWebView.canGoBack()) {
+            mWebView.goBack();
+            return true;
+        } else if (keyCode == KeyEvent.KEYCODE_BACK) {
+            ConfirmExit();
+            return true;
+        }
+        return super.onKeyDown(keyCode, event);
+    }
+
+    //Adding some app close alert dialog
+    public void ConfirmExit() {
+        AlertDialog.Builder ad = new AlertDialog.Builder(MainActivity.this);
+        ad.setTitle("Are you sure..!");
+        ad.setMessage("Do you want close the Tab?");
+        ad.setCancelable(false);
+        ad.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int i) {
+                MainActivity.this.finish();
+
+            }
+        });
+        ad.setNegativeButton("No", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int i) {
+                dialog.dismiss();
+            }
+        });
+        ad.show();
+    }
+
+    //imlemnting option menu
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.options_menu, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    //option menu item click listeners implementing
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.action_Home:
+                linearLayout.setVisibility(View.GONE);
+                WebSettings webSetting1 = mWebView.getSettings();
+                webSetting1.setBuiltInZoomControls(true);
+                webSetting1.setJavaScriptEnabled(true);
+                mWebView.setWebViewClient(new WebViewClient());
+                mWebView.loadUrl("https://www.google.com");
+                break;
+
+        }
+        return super.onOptionsItemSelected(item);
+
+    }
+    private class CustomWebViewClient extends WebViewClient{
+        @Override
+        public boolean shouldOverrideUrlLoading(WebView view, String url) {
+            view.loadUrl(url);
+            return true;
+        }
+    }
+}
+
+
+
 
 ```
 
