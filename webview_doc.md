@@ -62,6 +62,11 @@ webSettings.setJavaScriptEnabled(true);
 
 ```
 
+#### A simple pracical on Android WebView
+
+<img src="https://raw.githubusercontent.com/Muneiahtellakula/android_development/master/webviewoutput.md.png">
+
+
 ### Steps to Create a simple app on Android WebView 
 
 
