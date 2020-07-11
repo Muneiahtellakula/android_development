@@ -1,7 +1,5 @@
 ## Android Services
-    * What are Android Services?
-    * Android- Services Life cycle
-    * Android- Services Methods
+
 #### What are Android Services?
 * Service is basically a process. Android service is a component that runs in the background in order to perform long-running operations without interacting with the user and it works even if the application is destroyed. Another application component can start a service and it continues to run in the background even if you switch to another application.
 
@@ -76,7 +74,13 @@ public class MyService extends Service {
 
 ```
 
-### A Simple app implementing Android Service
+### A Simple application implementing an Android Service
+
+<img src="https://raw.githubusercontent.com/Muneiahtellakula/android_development/master/services.png">
+
+   * For Adding the Song create new resources directory(app\res(right click new )\Androd Resource Directory\raw
+
+   * Next new add audio file(mp3) in the res\raw folder
 
 **acivity_main.xml**
 ```
