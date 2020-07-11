@@ -62,7 +62,7 @@ webSettings.setJavaScriptEnabled(true);
 
 ```
 
-#### A simple pracical on Android WebView
+#### A simple practical on Android WebView
 
 <img src="https://raw.githubusercontent.com/Muneiahtellakula/android_development/master/webviewoutput.md.png">
 
