@@ -69,7 +69,6 @@ Android Support	|SQLite	|Room(semi-sql), GreenDAO, Realm
    
 ### Room Architecture
   
-<<<<<<< HEAD
 ### For Adding Dependancys :
 
 **At build.gradle file(app:module)**
