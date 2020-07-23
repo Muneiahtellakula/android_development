@@ -816,8 +816,5 @@ public class MyViewModel extends AndroidViewModel {
         android:id="@+id/delete"/>
 </LinearLayout>
 ```
-3. ****
-3. ****
-3. ****
-3. ****
+
 
