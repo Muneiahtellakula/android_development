@@ -49,7 +49,7 @@ Android Support	|SQLite	|Room(semi-sql), GreenDAO, Realm
   * To add constraints, such as foreign keys.
   * Support for LiveData.
 **There are 3 major components in Room**
-1. **Entity :** A class annotated with the @Entity annotation is mapped to a table in database. Every entity is persisted in its own table and every field in class represents the column name.
+1. **[Entity](https://developer.android.com/reference/androidx/room/Entity) :** A class annotated with the @Entity annotation is mapped to a table in database. Every entity is persisted in its own table and every field in class represents the column name.
     * tableName attribute is used to define the name of the table
     * Every entity class must have at-least one Primary Key field, annotated with @PrimaryKey
     * Fields in entity class can be annotated with @ColumnInfo(name = “name_of_column”) annotation to give specific column names
@@ -93,7 +93,7 @@ android{
 
 ```
 
-**at build.gradle(project level)
+**at build.gradle(project level)**
 ```
 ext {
     roomVersion = '2.2.1'
@@ -103,7 +103,7 @@ ext {
 }
 
 ```
-=======
+
 <img src="https://raw.githubusercontent.com/Muneiahtellakula/android_development/master/rmdb.PNG">
 
 ### Using the Architecture Components
