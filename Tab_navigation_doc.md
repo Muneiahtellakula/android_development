@@ -1,4 +1,4 @@
-## Lateral Navigation:
+## Lateral Navigation And Tab Navigation
  * Lateral navigation is **navigation between sibling screens in the application's screen hierarchy** (sometimes referred to as a screen map). The most prominent lateral navigation patterns are tabs and horizontal paging (also known as swipe views). This pattern and others are described in Designing Effective Navigation. **For Example Tab Navigation**
     
     * Between siblings
