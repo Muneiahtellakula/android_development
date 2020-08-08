@@ -256,22 +256,6 @@ public class ChatFragment extends Fragment {
 
 **same remaining two fragments**
 
-## Run the App
-
 ## Output Screen
 
 <img src="https://github.com/Muneiahtellakula/android_development/blob/master/tabNavPractical.gif">
-
-
-
-
-
-## Thank You..!
-
-
-
-
-
-
-
-
