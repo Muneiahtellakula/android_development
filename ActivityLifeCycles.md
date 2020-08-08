@@ -90,7 +90,7 @@ onDestroy()
 
 ## Implenting Acivity LifeCycles 
 
-### [Click here for clear output video](https://drive.google.com/file/d/1osFrkxJvcFBC_c1a5qRtR8AphXQxlUIP/view?usp=sharing)
+### [Click here for clear output video](https://drive.google.com/file/d/1Bn7BigK9imBACFA1JC3bbNNMHboMEC0a/view?usp=sharing)
 
 **Step 1:acivity_main.xml**
 ``` XML
