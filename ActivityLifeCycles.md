@@ -89,7 +89,10 @@ onDestroy()
 **Sample activity to understand the life cycle**
 
 ## Implenting Acivity LifeCycles 
-**Step 1:**
+
+### [Click here for clear output video](https://drive.google.com/file/d/1Bn7BigK9imBACFA1JC3bbNNMHboMEC0a/view?usp=sharing)
+
+**Step 1:acivity_main.xml**
 ``` XML
 
 <?xml version="1.0" encoding="utf-8"?>
@@ -119,7 +122,7 @@ onDestroy()
 
 ```
 
-**Step :2**
+**Step 2:MainAcivity.java**
 ```
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -188,4 +191,4 @@ public class MainActivity extends AppCompatActivity {
 ```
 
 
-```Java
+

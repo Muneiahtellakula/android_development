@@ -1,4 +1,4 @@
-## Lateral Navigation:
+## Lateral Navigation And Tab Navigation
  * Lateral navigation is **navigation between sibling screens in the application's screen hierarchy** (sometimes referred to as a screen map). The most prominent lateral navigation patterns are tabs and horizontal paging (also known as swipe views). This pattern and others are described in Designing Effective Navigation. **For Example Tab Navigation**
     
     * Between siblings
@@ -256,22 +256,6 @@ public class ChatFragment extends Fragment {
 
 **same remaining two fragments**
 
-## Run the App
-
 ## Output Screen
 
 <img src="https://github.com/Muneiahtellakula/android_development/blob/master/tabNavPractical.gif">
-
-
-
-
-
-## Thank You..!
-
-
-
-
-
-
-
-
