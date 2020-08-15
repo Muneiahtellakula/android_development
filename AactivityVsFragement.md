@@ -1,4 +1,4 @@
-# Activity and Fragment Overview
+# Android Activity and Fragment Overview
 
 If you are new to Android development, you might have read up about activity and fragment and think they are similar. You may not be sure when to use one over the other.This doc is to help go over the basics of an activity and a fragment and see how they are similar and different.
 
