@@ -1,18 +1,18 @@
 # Activities and intents
 
-#### Introduction
+## Introduction
 
 In this, you learn about the Activity class, the major building block of your app's user interface (UI). You also learn about using an Intent to communicate from one activity to another.
 
 
-### About activities
+## About activities
 * An activity represents a single screen in your app with an interface the user can interact with. For example, an email app might have one activity that shows a list of new emails, another activity to compose an email, and another activity for reading individual messages. Your app is probably a collection of activities that you create yourself, or that you reuse from other apps.
 
 * Although the activities in your app work with each other to form a cohesive user experience, each activity is independent of the others. This enables your app to start an activity in another app, and it enables other apps to start activities in your app (if your app allows this). For example, a messaging app could start an activity in a camera app to take a picture, then start an activity in an email app to let the user share the picture in email. 
 
 
-#### Creating an Activity
-#### To implement an Activity in your app, do the following:**
+## Creating an Activity
+## To implement an Activity in your app, do the following:**
 
 **Create an Activity Java class.**
 
@@ -21,12 +21,12 @@ In this, you learn about the Activity class, the major building block of your ap
 * When you create a new project for your app, or add a new Activity to your app by choosing File > New > Activity, the template automatically performs the steps listed above.
 
 
-#### Create the Activity
+## Create the Activity
 * When you create a new project in Android Studio and choose the Backwards Compatibility (AppCompat) option, the MainActivity is, by default, a subclass of the AppCompatActivity class. The AppCompatActivity class lets you use up-to-date Android app features such as the app bar and Material Design, while still enabling your app to be compatible with devices running older versions of Android.
 
 * Here is a skeleton subclass of AppCompatActivity:
 
-```
+``` Java
 public class MainActivity extends AppCompatActivity {
    @Override
    protected void onCreate(Bundle savedInstanceState) {
@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
 * In addition to lifecycle callbacks, you may also implement methods in your Activity to handle other behavior such as user input or button clicks.
 
 
-#### Implement the activity's UI
+## Implement the activity's UI
 * The UI for an activity is provided by a hierarchy of View elements, which controls a particular space within the activity window and can respond to user interaction.
 
 * The most common way to define a UI using View elements is with an XML layout file stored as part of your app's resources. Defining your layout in XML enables you to maintain the design of your UI separately from the source code that defines the activity behavior.
@@ -83,7 +83,7 @@ public class MainActivity extends AppCompatActivity {
 * Each Activity in your app can also declare Intent filters, but only your MainActivity should include the "main" action. You learn more about how to use an implicit Intent and Intent filters in a later section.
 
 
-#### Add another Activity to your project
+## Add another Activity to your project
 * The MainActivity for your app and its associated layout file is supplied by an Activity template in Android Studio such as Empty Activity or Basic Activity. You can add a new Activity to your project by choosing File > New > Activity. Choose the Activity template you want to use, or open the Gallery to see all the available templates.
 
 <img src="https://github.com/Muneiahtellakula/android_development/blob/master/activity-gallery.png" height="400" width="600">
@@ -94,15 +94,12 @@ public class MainActivity extends AppCompatActivity {
 * An XML file containing the layout for the new activity. Note that the setContentView() method in the Activity class inflates this new layout.
 * An additional <activity> element in the AndroidManifest.xml file that specifies the new activity. The second Activity definition does not include any Intent filters. If you plan to use this activity only within your app (and not enable that activity to be started by any other app), you do not need to add filters
 
-
-# What are intents?
 **Android application components can connect to other Android applications. This connection is based on a task description represented by an Intent object.**
 
 * Intents are asynchronous messages which allow application components to request functionality from other Android components. Intents allow you to interact with components from the same applications as well as with components contributed by other applications. For example, an activity can start an external activity for taking a picture.
 
 * Intents are objects of the android.content.Intent type. Your code can send them to the Android system defining the components you are targeting. For example, via the startActivity() method you can define that the intent should be used to start an activity.
 
-**About intents**
 
 * Each activity is started or activated with an Intent, which is a message object that makes a request to the Android runtime to start an activity or other app component in your app or in some other app.
 
@@ -113,12 +110,16 @@ public class MainActivity extends AppCompatActivity {
 * In this chapter you learn about using intents with activities, but intents can also be used to start services or broadcast receivers. You learn how to use those app components in another practical.
 
 
-#### Intent types
-**Intents can be explicit or implicit:**
+## Intent types
+**Intents can be explicit and implicit:**
 
-**Explicit intent:** You specify the receiving activity (or other component) using the activity's fully qualified class name. You use explicit intents to start components in your own app (for example, to move between screens in the UI), because you already know the package and class name of that component.
+## Explicit intent:
 
-**Implicit intent:** You do not specify a specific activity or other component to receive the intent. Instead, you declare a general action to perform, and the Android system matches your request to an activity or other component that can handle the requested action. You learn more about using implicit intents in another practical.
+**You specify the receiving activity (or other component) using the activity's fully qualified class name. You use explicit intents to start components in your own app (for example, to move between screens in the UI), because you already know the package and class name of that component.**
+
+##Implicit intent:
+
+**You do not specify a specific activity or other component to receive the intent. Instead, you declare a general action to perform, and the Android system matches your request to an activity or other component that can handle the requested action. You learn more about using implicit intents in another practical.**
 
 * Intent objects and fields
 * For an explicit Intent, the key fields include the following:
@@ -132,11 +133,11 @@ public class MainActivity extends AppCompatActivity {
 * For an implicit Intent, you may need to also define the Intent action and category. You learn more about Intent actions and categories in another chapter.
 
 
-#### Starting an Activity with an explicit Intent
+### Starting an Activity with an explicit Intent
 * To start a specific Activity from another Activity, use an explicit Intent and the startActivity() method. An explicit Intent includes the fully qualified class name for the Activity or other component in the Intent object. All the other Intent fields are optional, and null by default.
 
 * For example, if you want to start the ShowMessageActivity to show a specific message in an email app, use code like this:
-```
+```java
 Intent messageIntent = new Intent(this, ShowMessageActivity.class);
 startActivity(messageIntent);
 The intent constructor takes two arguments for an explicit Intent:
@@ -145,7 +146,7 @@ The intent constructor takes two arguments for an explicit Intent:
 * The specific component to start (ShowMessageActivity.class).
 * Use the startActivity() method with the new Intent object as the only argument. The startActivity() method sends the Intent to the Android system, which launches the ShowMessageActivity class on behalf of your app. The new Activity appears on the screen, and the originating Activity is paused.
 
-#### For Implimenting The Activites And Intents Example Follow the code :
+### For Implimenting The Activites And Intents Example Follow the code :
 
 **Explicit Intent And Implicit Intent**
 
@@ -278,7 +279,7 @@ public static final String KEY="apssdc.in";
 ```
 **AndroidManifest.xml**
 
-```
+```xml
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.muneiah.intentstypetest">
@@ -305,8 +306,8 @@ public static final String KEY="apssdc.in";
 </manifest>
 
 ```
-**activity_secon.xml**
-```
+**activity_second.xml**
+```xml
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     android:orientation="vertical"
@@ -334,7 +335,7 @@ public static final String KEY="apssdc.in";
 ```
 **SecondActivity.java**
 
-```
+```java
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
