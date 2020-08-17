@@ -12,7 +12,7 @@ In this, you learn about the Activity class, the major building block of your ap
 
 
 ## Creating an Activity
-## To implement an Activity in your app, do the following:**
+### To implement an Activity in your app, do the following:
 
 **Create an Activity Java class.**
 
