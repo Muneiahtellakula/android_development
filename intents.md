@@ -117,7 +117,7 @@ public class MainActivity extends AppCompatActivity {
 
 **You specify the receiving activity (or other component) using the activity's fully qualified class name. You use explicit intents to start components in your own app (for example, to move between screens in the UI), because you already know the package and class name of that component.**
 
-##Implicit intent:
+## Implicit intent:
 
 **You do not specify a specific activity or other component to receive the intent. Instead, you declare a general action to perform, and the Android system matches your request to an activity or other component that can handle the requested action. You learn more about using implicit intents in another practical.**
 
