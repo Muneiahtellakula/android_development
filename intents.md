@@ -26,7 +26,7 @@ In this, you learn about the Activity class, the major building block of your ap
 
 * Here is a skeleton subclass of AppCompatActivity:
 
-``` Java
+```Java
 public class MainActivity extends AppCompatActivity {
    @Override
    protected void onCreate(Bundle savedInstanceState) {
@@ -58,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
 **Declare the Activity in AndroidManifest.xml**
 * Each Activity in your app must be declared in the AndroidManifest.xml file with the <activity> element, inside the <application> section. When you create a new project or add a new Activity to your project in Android Studio, the AndroidManifest.xml file is created or updated to include skeleton declarations for each Activity. Here's the declaration for MainActivity:
 
-```
+```xml
 <activity android:name=".MainActivity" >
    <intent-filter>
       <action android:name="android.intent.action.MAIN" />
@@ -70,7 +70,7 @@ public class MainActivity extends AppCompatActivity {
 * The <activity> element includes a number of attributes to define properties of the Activity such as its label, icon, or theme. The only required attribute is android:name, which specifies the class name for the Activity (such as MainActivity). See the <activity> element reference for more information on Activity declarations.
 
 * The <activity> element can also include declarations for Intent filters. The Intent filters specify the kind of Intent your Activity will accept.
-```
+```xml
 <intent-filter>
    <action android:name="android.intent.action.MAIN" />
    <category android:name="android.intent.category.LAUNCHER" />
