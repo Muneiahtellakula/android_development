@@ -140,8 +140,9 @@ public class MainActivity extends AppCompatActivity {
 ```java
 Intent messageIntent = new Intent(this, ShowMessageActivity.class);
 startActivity(messageIntent);
-The intent constructor takes two arguments for an explicit Intent:
 ```
+**The intent constructor takes two arguments for an explicit Intent:**
+
 * An application context. In this example, the Activity class provides the context (this).
 * The specific component to start (ShowMessageActivity.class).
 * Use the startActivity() method with the new Intent object as the only argument. The startActivity() method sends the Intent to the Android system, which launches the ShowMessageActivity class on behalf of your app. The new Activity appears on the screen, and the originating Activity is paused.
