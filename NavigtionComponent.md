@@ -1,4 +1,4 @@
-## NAVIGATION COMPONENT
+## NAVIGATION COMPONENT in Android 
 ### Introducing Navigation Component
 * Navigation around an app ,by which i mean moving from one screen to another is an absolutely fundamental part of Android Development 
 * Navigation refers to the interactions that allow users to navigate across, into, and back out from the different pieces of content      within your app. 
