@@ -41,38 +41,38 @@ public class MainActivity extends AppCompatActivity {
 * In addition to lifecycle callbacks, you may also implement methods in your Activity to handle other behavior such as user input or button clicks.
 
 
-## Implement the activity's UI
+### Implement the activity's UI
 * The UI for an activity is provided by a hierarchy of View elements, which controls a particular space within the activity window and can respond to user interaction.
 * The most common way to define a UI using View elements is with an XML layout file stored as part of your app's resources. Defining your layout in XML enables you to maintain the design of your UI separately from the source code that defines the activity behavior.
 * You can also create new View elements directly in your activity code by inserting new View objects into a ViewGroup, and then passing the root ViewGroup to setContentView(). After your layout has been inflated—regardless of its source—you can add more View elements anywhere in the View hierarchy.
 
 **Declare the Activity in AndroidManifest.xml**
-      * Each Activity in your app must be declared in the AndroidManifest.xml file with the <activity> element, inside the <application> section. When you create a new project or add a new Activity to your project in Android Studio, the AndroidManifest.xml file is created or updated to include skeleton declarations for each Activity. Here's the declaration for MainActivity:
+* Each Activity in your app must be declared in the AndroidManifest.xml file with the <activity> element, inside the <application> section. When you create a new project or add a new Activity to your project in Android Studio, the AndroidManifest.xml file is created or updated to include skeleton declarations for each Activity. Here's the declaration for MainActivity:
 
-      ``` xml 
-      <activity android:name=".MainActivity" >
-         <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
-            <category android:name="android.intent.category.LAUNCHER" />
-         </intent-filter>
-      </activity>
-      ```
+``` xml 
+<activity android:name=".MainActivity" >
+   <intent-filter>
+      <action android:name="android.intent.action.MAIN" />
+      <category android:name="android.intent.category.LAUNCHER" />
+   </intent-filter>
+</activity>
+```
 
-     * The <activity> element includes a number of attributes to define properties of the Activity such as its label, icon, or theme. The only required attribute is android:name, which specifies the class name for the Activity (such as MainActivity). See the <activity> element reference for more information on Activity declarations.
+* The <activity> element includes a number of attributes to define properties of the Activity such as its label, icon, or theme. The only required attribute is android:name, which specifies the class name for the Activity (such as MainActivity). See the <activity> element reference for more information on Activity declarations.
 
-   * The <activity> element can also include declarations for Intent filters. The Intent filters specify the kind of Intent your Activity will accept.
-      ```xml
-      <intent-filter>
-         <action android:name="android.intent.action.MAIN" />
-         <category android:name="android.intent.category.LAUNCHER" />
-      </intent-filter>
-        ```
-   
-   * Intent filters must include at least one <action> element, and can also include a <category> and optional <data>. The MainActivity for your app needs an Intent filter that defines the "main" action and the "launcher" category so that the system can launch your app. Android Studio creates this Intent filter for the MainActivity in your project.
+* The <activity> element can also include declarations for Intent filters. The Intent filters specify the kind of Intent your Activity will accept.
+   ```xml
+   <intent-filter>
+      <action android:name="android.intent.action.MAIN" />
+      <category android:name="android.intent.category.LAUNCHER" />
+   </intent-filter>
+     ```
 
-   * The <action> element specifies that this is the "main" entry point to the app. The <category> element specifies that this Activity should be listed in the system's app launcher (to allow users to launch this Activity).
+ * Intent filters must include at least one <action> element, and can also include a <category> and optional <data>. The MainActivity for your app needs an Intent filter that defines the "main" action and the "launcher" category so that the system can launch your app. Android Studio creates this Intent filter for the MainActivity in your project.
 
-   * Each Activity in your app can also declare Intent filters, but only your MainActivity should include the "main" action. You learn more about how to use an implicit Intent and Intent filters in a later section.
+ * The <action> element specifies that this is the "main" entry point to the app. The <category> element specifies that this Activity should be listed in the system's app launcher (to allow users to launch this Activity).
+
+ * Each Activity in your app can also declare Intent filters, but only your MainActivity should include the "main" action. You learn more about how to use an implicit Intent and Intent filters in a later section.
 
 ## Add another Activity to your project
 
