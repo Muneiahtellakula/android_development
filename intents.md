@@ -1,16 +1,10 @@
 # Activities and intents
 
 ## Introduction
-
 In this, you learn about the Activity class, the major building block of your app's user interface (UI). You also learn about using an Intent to communicate from one activity to another.
-
-
 ## About activities
 * An activity represents a single screen in your app with an interface the user can interact with. For example, an email app might have one activity that shows a list of new emails, another activity to compose an email, and another activity for reading individual messages. Your app is probably a collection of activities that you create yourself, or that you reuse from other apps.
-
 * Although the activities in your app work with each other to form a cohesive user experience, each activity is independent of the others. This enables your app to start an activity in another app, and it enables other apps to start activities in your app (if your app allows this). For example, a messaging app could start an activity in a camera app to take a picture, then start an activity in an email app to let the user share the picture in email. 
-
-
 ## Creating an Activity
 ### To implement an Activity in your app, do the following:
 
@@ -49,16 +43,13 @@ public class MainActivity extends AppCompatActivity {
 
 ## Implement the activity's UI
 * The UI for an activity is provided by a hierarchy of View elements, which controls a particular space within the activity window and can respond to user interaction.
-
 * The most common way to define a UI using View elements is with an XML layout file stored as part of your app's resources. Defining your layout in XML enables you to maintain the design of your UI separately from the source code that defines the activity behavior.
-
 * You can also create new View elements directly in your activity code by inserting new View objects into a ViewGroup, and then passing the root ViewGroup to setContentView(). After your layout has been inflated—regardless of its source—you can add more View elements anywhere in the View hierarchy.
-
 
 **Declare the Activity in AndroidManifest.xml**
 * Each Activity in your app must be declared in the AndroidManifest.xml file with the <activity> element, inside the <application> section. When you create a new project or add a new Activity to your project in Android Studio, the AndroidManifest.xml file is created or updated to include skeleton declarations for each Activity. Here's the declaration for MainActivity:
 
-```xml
+``` xml 
 <activity android:name=".MainActivity" >
    <intent-filter>
       <action android:name="android.intent.action.MAIN" />
@@ -76,6 +67,7 @@ public class MainActivity extends AppCompatActivity {
    <category android:name="android.intent.category.LAUNCHER" />
 </intent-filter>
   ```
+   
 * Intent filters must include at least one <action> element, and can also include a <category> and optional <data>. The MainActivity for your app needs an Intent filter that defines the "main" action and the "launcher" category so that the system can launch your app. Android Studio creates this Intent filter for the MainActivity in your project.
 
 * The <action> element specifies that this is the "main" entry point to the app. The <category> element specifies that this Activity should be listed in the system's app launcher (to allow users to launch this Activity).
@@ -145,7 +137,8 @@ startActivity(messageIntent);
 
 * An application context. In this example, the Activity class provides the context (this).
 * The specific component to start (ShowMessageActivity.class).
-* Use the startActivity() method with the new Intent object as the only argument. The startActivity() method sends the Intent to the Android system, which launches the ShowMessageActivity class on behalf of your app. The new Activity appears on the screen, and the originating Activity is paused.
+* Use the startActivity() method with the new Intent object as the only argument.
+* The startActivity() method sends the Intent to the Android system, which launches the ShowMessageActivity class on behalf of your app.The new Activity appears on the screen, and the originating Activity is paused.
 
 ### For Implimenting The Activites And Intents Example Follow the code :
 
