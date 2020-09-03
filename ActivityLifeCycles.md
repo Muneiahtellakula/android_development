@@ -7,6 +7,7 @@
 * The activity lifecycle is the set of states an activity can be in during its entire lifetime, from the time it's created to when it's destroyed and the system reclaims its resources. As the user interacts with your app and other apps on the device, activities move into different states.
 
 **For example:**
+
 <img src="https://raw.githubusercontent.com/Muneiahtellakula/android_development/master/act.PNG">
 
 * When you start an app, the app's main activity ("Activity 1" in the figure below) is started, comes to the foreground, and receives the user focus.
