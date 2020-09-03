@@ -92,9 +92,10 @@ onDestroy()
 
 ### [Click here for clear output video](https://drive.google.com/file/d/1Bn7BigK9imBACFA1JC3bbNNMHboMEC0a/view?usp=sharing)
 
+
+
 **Step 1:acivity_main.xml**
 ``` XML
-
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
@@ -118,12 +119,9 @@ onDestroy()
         
 </androidx.constraintlayout.widget.ConstraintLayout>
 
-
-
 ```
-
 **Step 2:MainAcivity.java**
-```
+``` java
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
@@ -186,9 +184,4 @@ public class MainActivity extends AppCompatActivity {
         Toast.makeText(this, "Now App is Destroyed", Toast.LENGTH_SHORT).show();
     }
 }
-
-
 ```
-
-
-
