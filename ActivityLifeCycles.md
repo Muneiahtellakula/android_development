@@ -15,7 +15,7 @@
 * When you're done with the Activity 2 and navigate back, Activity 1 resumes. Activity 2 stops and is no longer needed.
 * If the user doesn't resume Activity 2, the system eventually destroys it. Activity lifecycle
 
-### Activity states and lifecycle callback methods**
+### Activity states and lifecycle callback methods
 * When an Activity transitions into and out of the different lifecycle states as it runs, the Android system calls several lifecycle callback methods at each stage. All of the callback methods are hooks that you can override in each of your Activity classes to define how that Activity behaves when the user leaves and re-enters the Activity. Keep in mind that the lifecycle states (and callbacks) are per Activity, not per app, and you may implement different behavior at different points in the lifecycle of each Activity.
 
 <img src="https://github.com/AP-Skill-Development-Corporation/Android-Students-Training-II-Batch-1/blob/master/activity_lifecycle.png?raw=true">
@@ -108,6 +108,7 @@ The final call you receive before your activity is destroyed. This can happen ei
 </androidx.constraintlayout.widget.ConstraintLayout>
 
 ```
+
 **Step 2:MainAcivity.java**
 ``` java
 import androidx.appcompat.app.AppCompatActivity;
