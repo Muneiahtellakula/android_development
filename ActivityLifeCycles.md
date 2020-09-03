@@ -5,6 +5,7 @@
 ## Introduction
 * In this you learn about the activity lifecycle, the callback events you can implement to perform tasks in each stage of the lifecycle, and how to handle Activity instance states throughout the activity lifecycle.
 * The activity lifecycle is the set of states an activity can be in during its entire lifetime, from the time it's created to when it's destroyed and the system reclaims its resources. As the user interacts with your app and other apps on the device, activities move into different states.
+
 **For example:**
 * When you start an app, the app's main activity ("Activity 1" in the figure below) is started, comes to the foreground, and receives the user focus.
 * When you start a second activity ("Activity 2" in the figure below), a new activity is created and started, and the main activity is stopped.
@@ -18,30 +19,29 @@
 
 **This figure shows each of the Activity states and the callback methods that occur as the Activity transitions between different states:**
 
-#### onCreate():**
+#### onCreate():
 
 * Called when the activity is first created. This is where you should do all of your normal static set up: create views, bind data to lists, etc. This method also provides you with a Bundle containing the activity's previously frozen state, if there was one. Always followed by onStart().
 
-#### onRestart():**
+#### onRestart():
 
 * Called after your activity has been stopped, prior to it being started again. Always followed by onStart()
-#### onStart():**
+#### onStart():
 
 * Called when the activity is becoming visible to the user. Followed by onResume() if the activity comes to the foreground.
 
-#### onResume():**
+#### onResume():
 
 * Called when the activity will start interacting with the user. At this point your activity is at the top of the activity stack, with user input going to it. Always followed by onPause().
 
-#### onPause ():**
+#### onPause ():
 
 * Called as part of the activity lifecycle when an activity is going into the background, but has not (yet) been killed. The counterpart to onResume(). When activity B is launched in front of activity A, this callback will be invoked on A. B will not be created until A's onPause() returns, so be sure to not do anything lengthy here.
 
-#### onStop():**
-
+#### onStop():
 * Called when you are no longer visible to the user. You will next receive either onRestart(), onDestroy(), or nothing, depending on later user activity. Note that this method may never be called, in low memory situations where the system does not have enough memory to keep your activity's process running after its onPause() method is called.
 
-#### onDestroy():**
+#### onDestroy():
 
 The final call you receive before your activity is destroyed. This can happen either because the activity is finishing (someone called finish() on it, or because the system is temporarily destroying this instance of the activity to save space. You can distinguish between> these two scenarios with the isFinishing() method.
 #### Working Flow 
@@ -78,8 +78,6 @@ The final call you receive before your activity is destroyed. This can happen ei
 ## Implenting Acivity LifeCycles 
 
 ### [Click here for clear output video](https://drive.google.com/file/d/1Bn7BigK9imBACFA1JC3bbNNMHboMEC0a/view?usp=sharing)
-
-
 
 **Step 1:acivity_main.xml**
 ``` XML
