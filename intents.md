@@ -47,32 +47,32 @@ public class MainActivity extends AppCompatActivity {
 * You can also create new View elements directly in your activity code by inserting new View objects into a ViewGroup, and then passing the root ViewGroup to setContentView(). After your layout has been inflated—regardless of its source—you can add more View elements anywhere in the View hierarchy.
 
 **Declare the Activity in AndroidManifest.xml**
-* Each Activity in your app must be declared in the AndroidManifest.xml file with the <activity> element, inside the <application> section. When you create a new project or add a new Activity to your project in Android Studio, the AndroidManifest.xml file is created or updated to include skeleton declarations for each Activity. Here's the declaration for MainActivity:
+      * Each Activity in your app must be declared in the AndroidManifest.xml file with the <activity> element, inside the <application> section. When you create a new project or add a new Activity to your project in Android Studio, the AndroidManifest.xml file is created or updated to include skeleton declarations for each Activity. Here's the declaration for MainActivity:
 
-``` xml 
-<activity android:name=".MainActivity" >
-   <intent-filter>
-      <action android:name="android.intent.action.MAIN" />
-      <category android:name="android.intent.category.LAUNCHER" />
-   </intent-filter>
-</activity>
-```
+      ``` xml 
+      <activity android:name=".MainActivity" >
+         <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+            <category android:name="android.intent.category.LAUNCHER" />
+         </intent-filter>
+      </activity>
+      ```
 
-* The <activity> element includes a number of attributes to define properties of the Activity such as its label, icon, or theme. The only required attribute is android:name, which specifies the class name for the Activity (such as MainActivity). See the <activity> element reference for more information on Activity declarations.
+     * The <activity> element includes a number of attributes to define properties of the Activity such as its label, icon, or theme. The only required attribute is android:name, which specifies the class name for the Activity (such as MainActivity). See the <activity> element reference for more information on Activity declarations.
 
-* The <activity> element can also include declarations for Intent filters. The Intent filters specify the kind of Intent your Activity will accept.
-```xml
-<intent-filter>
-   <action android:name="android.intent.action.MAIN" />
-   <category android:name="android.intent.category.LAUNCHER" />
-</intent-filter>
-  ```
+   * The <activity> element can also include declarations for Intent filters. The Intent filters specify the kind of Intent your Activity will accept.
+      ```xml
+      <intent-filter>
+         <action android:name="android.intent.action.MAIN" />
+         <category android:name="android.intent.category.LAUNCHER" />
+      </intent-filter>
+        ```
    
-* Intent filters must include at least one <action> element, and can also include a <category> and optional <data>. The MainActivity for your app needs an Intent filter that defines the "main" action and the "launcher" category so that the system can launch your app. Android Studio creates this Intent filter for the MainActivity in your project.
+   * Intent filters must include at least one <action> element, and can also include a <category> and optional <data>. The MainActivity for your app needs an Intent filter that defines the "main" action and the "launcher" category so that the system can launch your app. Android Studio creates this Intent filter for the MainActivity in your project.
 
-* The <action> element specifies that this is the "main" entry point to the app. The <category> element specifies that this Activity should be listed in the system's app launcher (to allow users to launch this Activity).
+   * The <action> element specifies that this is the "main" entry point to the app. The <category> element specifies that this Activity should be listed in the system's app launcher (to allow users to launch this Activity).
 
-* Each Activity in your app can also declare Intent filters, but only your MainActivity should include the "main" action. You learn more about how to use an implicit Intent and Intent filters in a later section.
+   * Each Activity in your app can also declare Intent filters, but only your MainActivity should include the "main" action. You learn more about how to use an implicit Intent and Intent filters in a later section.
 
 ## Add another Activity to your project
 
@@ -80,7 +80,7 @@ public class MainActivity extends AppCompatActivity {
 
 <img src="https://github.com/Muneiahtellakula/android_development/blob/master/activity-gallery.png" height="400" width="600">
 
-- When you choose an Activity template, you see the same set of screens for creating the new activity that you did when you created the project. Android Studio provides three things for each new activity in your app:
+*When you choose an Activity template, you see the same set of screens for creating the new activity that you did when you created the project. Android Studio provides three things for each new activity in your app*
 
 * A Java file for the new Activity with a skeleton class definition and onCreate() method. The new Activity, like MainActivity, is a subclass of AppCompatActivity.
 * An XML file containing the layout for the new activity. Note that the setContentView() method in the Activity class inflates this new layout.
@@ -101,15 +101,13 @@ public class MainActivity extends AppCompatActivity {
 
 * In this chapter you learn about using intents with activities, but intents can also be used to start services or broadcast receivers. You learn how to use those app components in another practical.
 
+## Intents Types 
 
-## Intent types
-**Intents can be explicit and implicit:**
-
-## Explicit intent:
+### 1. Explicit intent:
 
 **You specify the receiving activity (or other component) using the activity's fully qualified class name. You use explicit intents to start components in your own app (for example, to move between screens in the UI), because you already know the package and class name of that component.**
 
-## Implicit intent:
+## 2. Implicit intent:
 
 **You do not specify a specific activity or other component to receive the intent. Instead, you declare a general action to perform, and the Android system matches your request to an activity or other component that can handle the requested action. You learn more about using implicit intents in another practical.**
 
