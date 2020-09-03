@@ -74,8 +74,8 @@ public class MainActivity extends AppCompatActivity {
 
 * Each Activity in your app can also declare Intent filters, but only your MainActivity should include the "main" action. You learn more about how to use an implicit Intent and Intent filters in a later section.
 
-
 ## Add another Activity to your project
+
 * The MainActivity for your app and its associated layout file is supplied by an Activity template in Android Studio such as Empty Activity or Basic Activity. You can add a new Activity to your project by choosing File > New > Activity. Choose the Activity template you want to use, or open the Gallery to see all the available templates.
 
 <img src="https://github.com/Muneiahtellakula/android_development/blob/master/activity-gallery.png" height="400" width="600">
