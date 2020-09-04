@@ -171,14 +171,11 @@ webSettings.setJavaScriptEnabled(true);
 ```
 
 **MainActivity.Java**
-
 ``` Java
 package com.muneiah.androidwebview;
-
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
@@ -241,7 +238,6 @@ public class MainActivity extends AppCompatActivity {
             });
         }
     }
-
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         if ((keyCode == KeyEvent.KEYCODE_BACK) && mWebView.canGoBack()) {
             mWebView.goBack();
@@ -252,7 +248,6 @@ public class MainActivity extends AppCompatActivity {
         }
         return super.onKeyDown(keyCode, event);
     }
-
     //Adding some app close alert dialog
     public void ConfirmExit() {
         AlertDialog.Builder ad = new AlertDialog.Builder(MainActivity.this);
@@ -308,7 +303,6 @@ public class MainActivity extends AppCompatActivity {
     }
 }
 ```
-
 **Step 4:MainActivity.java**
 ```Java
 package com.muneiah.androidwebview;
