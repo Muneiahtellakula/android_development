@@ -313,7 +313,7 @@ public class MainActivity extends AppCompatActivity {
 ```
 
 **Step 4:MainActivity.java**
-```
+```Java
 package com.muneiah.androidwebview;
 
 import androidx.annotation.NonNull;
