@@ -9,9 +9,7 @@
 ## Adding a WebView to your app
 
 * To add a WebView to your app, you can either include the <WebView> element in your activity layout, or set the entire Activity window as a WebView in onCreate().
-
-
-
+    
 **To add a WebViewto your app in the layout, add the following code to your activity's layout XML file:**
 ``` xml
 <WebView
@@ -35,7 +33,7 @@ myWebView.loadUrl("http://www.example.com");
       <uses-permission android:name="android.permission.INTERNET" />
         ...
  </manifest>       
- ```
+```
 ## That's all you need for a basic WebView that displays a web page. Additionally, you can customize your WebViewby modifying the following:
  
 * Enabling fullscreen support with WebChromeClient. This class is also called when a WebView needs permission to alter the host app's UI, such as creating or closing windows and sending JavaScript dialogs to the user. To learn more about debugging in this context, read Debugging Web Apps.
