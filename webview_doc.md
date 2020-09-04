@@ -6,7 +6,7 @@
 
 * Another scenario in which WebView can help is if your app provides data to the user that always requires an Internet connection to retrieve data, such as email. In this case, you might find that it's easier to build a WebView in your Android app that shows a web page with all the user data, rather than performing a network request, then parsing the data and rendering it in an Android layout. Instead, you can design a web page that's tailored for Android devices and then implement a WebView in your Android app that loads the web page
 
-### Adding a WebView to your app
+## Adding a WebView to your app
 
 * To add a WebView to your app, you can either include the <WebView> element in your activity layout, or set the entire Activity window as a WebView in onCreate().
 
@@ -20,7 +20,7 @@
     android:layout_height="match_parent"
 />
 ```
-#### To load a web page in the WebView, use loadUrl(). For example:
+## To load a web page in the WebView, use loadUrl(). For example:
 
 ```
 WebView myWebView = (WebView) findViewById(R.id.webview);
@@ -37,7 +37,7 @@ myWebView.loadUrl("http://www.example.com");
  </manifest>       
  ```
  
- #### That's all you need for a basic WebView that displays a web page. Additionally, you can customize your WebViewby modifying the following:
+ ## That's all you need for a basic WebView that displays a web page. Additionally, you can customize your WebViewby modifying the following:
  
  * Enabling fullscreen support with WebChromeClient. This class is also called when a WebView needs permission to alter the host app's UI, such as creating or closing windows and sending JavaScript dialogs to the user. To learn more about debugging in this context, read Debugging Web Apps.
  
@@ -47,11 +47,11 @@ myWebView.loadUrl("http://www.example.com");
  
  * Using JavaScript to access Android framework objects that you have injected into a WebView.
  
- ### Using JavaScript in WebView
+ ## Using JavaScript in WebView
  
  *  If the web page you plan to load in your WebView uses JavaScript, you must enable JavaScript for your WebView. Once JavaScript is enabled, you can also create interfaces between your app code and your JavaScript code.
  
- #### Enabling JavaScript
+ ## Enabling JavaScript
  
 * JavaScript is disabled in a WebView by default. You can enable it through the WebSettings attached to your WebView.You can retrieve WebSettings with getSettings(), then enable JavaScript with setJavaScriptEnabled().
 
@@ -62,12 +62,12 @@ webSettings.setJavaScriptEnabled(true);
 
 ```
 
-#### A simple practical on Android WebView
+## A simple practical on Android WebView
 
 <img src="https://raw.githubusercontent.com/Muneiahtellakula/android_development/master/webviewoutput.md.png">
 
 
-### Steps to Create a simple app on Android WebView 
+## Steps to Create a simple app on Android WebView 
 
 
 **Step 1:Enable the Internet Permissions**
@@ -75,7 +75,6 @@ webSettings.setJavaScriptEnabled(true);
 **AndroidManifest.xml**
 
 ```
-
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.muneiah.androidwebview">
@@ -102,9 +101,8 @@ webSettings.setJavaScriptEnabled(true);
     </application>
 
 </manifest>
-
-
 ```
+
 **Step 2:** At design file design the userinterface components EditText,Button,And WebView 
 
 **activity_main.xml**
@@ -154,13 +152,12 @@ webSettings.setJavaScriptEnabled(true);
         android:background="@android:color/white" />
 
 </LinearLayout>
-
-
 ```
 
 **Step -3:** Create new menu directory and new menu resourse file name as options_menu
 
 **options_menu.xml**
+
 ```
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
@@ -173,8 +170,12 @@ webSettings.setJavaScriptEnabled(true);
         app:showAsAction="always" />
 
 </menu>
+```
 
-```package com.muneiah.androidwebview;
+**MainActivity.Java**
+
+``` Java
+package com.muneiah.androidwebview;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
@@ -308,10 +309,8 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 }
-
-
-
 ```
+
 **Step 4:MainActivity.java**
 ```
 package com.muneiah.androidwebview;
@@ -448,10 +447,6 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 }
-
-
-
-
 ```
 
 
