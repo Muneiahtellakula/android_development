@@ -36,22 +36,21 @@ myWebView.loadUrl("http://www.example.com");
         ...
  </manifest>       
  ```
+## That's all you need for a basic WebView that displays a web page. Additionally, you can customize your WebViewby modifying the following:
  
- ## That's all you need for a basic WebView that displays a web page. Additionally, you can customize your WebViewby modifying the following:
+* Enabling fullscreen support with WebChromeClient. This class is also called when a WebView needs permission to alter the host app's UI, such as creating or closing windows and sending JavaScript dialogs to the user. To learn more about debugging in this context, read Debugging Web Apps.
  
- * Enabling fullscreen support with WebChromeClient. This class is also called when a WebView needs permission to alter the host app's UI, such as creating or closing windows and sending JavaScript dialogs to the user. To learn more about debugging in this context, read Debugging Web Apps.
+* Handling events that impact content rendering, such as errors on form submissions or navigation with WebViewClient. You can also use this subclass to intercept URL loading.
  
- * Handling events that impact content rendering, such as errors on form submissions or navigation with WebViewClient. You can also use this subclass to intercept URL loading.
+* Enabling JavaScript by modifying WebSettings.
  
- * Enabling JavaScript by modifying WebSettings.
+* Using JavaScript to access Android framework objects that you have injected into a WebView.
  
- * Using JavaScript to access Android framework objects that you have injected into a WebView.
+## Using JavaScript in WebView
  
- ## Using JavaScript in WebView
+*  If the web page you plan to load in your WebView uses JavaScript, you must enable JavaScript for your WebView. Once JavaScript is enabled, you can also create interfaces between your app code and your JavaScript code.
  
- *  If the web page you plan to load in your WebView uses JavaScript, you must enable JavaScript for your WebView. Once JavaScript is enabled, you can also create interfaces between your app code and your JavaScript code.
- 
- ## Enabling JavaScript
+## Enabling JavaScript
  
 * JavaScript is disabled in a WebView by default. You can enable it through the WebSettings attached to your WebView.You can retrieve WebSettings with getSettings(), then enable JavaScript with setJavaScriptEnabled().
 
