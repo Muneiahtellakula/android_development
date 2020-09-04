@@ -41,18 +41,18 @@ It will contain different density type of icons such as hdpi, mdpi, xhdpi, xxhdp
 
 Following is the structure of the mipmap folder in the android application.
   ![Alt Text](https://www.tutlane.com/images/android/android_app_hdpi_mdpi_folders.png)
-<h2>Values Folder (res/values)</h2>
+Values Folder (res/values)
 This folder will contain various XML files, such as strings, colors, style definitions and a static array of strings or integers. 
 Following is the structure of the values folder in android application.
 
 ![Alt Text](https://www.tutlane.com/images/android/android_app_values_folder.png)
-<h2>Manifests Folder</h2>
+Manifests Folder
 This folder will contain a manifest file (AndroidManifest.xml) for our android application. 
 This manifest file will contain information about our application such as android version, access permissions, metadata, etc. of our application and its components.
 The manifest file will act as an intermediate between android OS and our application.Following is the structure of the manifests folder in the android application.
 
 ![Alt Text](https://www.tutlane.com/images/android/android_app_manifest_xml_file.png)
- <h2>Gradle Scripts</h2>
+Gradle Scripts
 In android, Gradle means automated build system and by using this we can define a build configuration that applies to all modules in our application.
 In Gradle build.gradle (Project), and build.gradle (Module) files are useful to build configurations that apply to all our app modules or specific to one app module.Following is the structure of Gradle Scripts in the android application.
   
@@ -60,7 +60,7 @@ In Gradle build.gradle (Project), and build.gradle (Module) files are useful to 
  
 Following are the important files which we need to implement an app in android studio.
 
-<h2>Android Layout File (activity_main.xml)
+Android Layout File (activity_main.xml)
 The UI of our application will be designed in this file and it will contain Design and Text modes. 
 It will exists in the layouts folder and the structure of activity_main.xml file in Design mode like as shown below.
  
