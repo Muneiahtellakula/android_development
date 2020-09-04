@@ -150,7 +150,7 @@ startActivity(messageIntent);
 
 **At Screen 4:** Here, system os asking to choose the destination ..here choosen crome ..it will open below 4(a) screen
 
-<img src="https://github.com/Muneiahtellakula/android_development/blob/master/intents_output.png">
+<img src="https://raw.githubusercontent.com/Muneiahtellakula/android_development/master/intents_output.png">
 
 **Data passing between two activities**
 
@@ -158,10 +158,9 @@ startActivity(messageIntent);
 
 **A Screen 6:** Here display the text where you entered at first screen 
 
-<img src="https://github.com/Muneiahtellakula/android_development/blob/master/dataPassing.png">
+<img src="https://raw.githubusercontent.com/Muneiahtellakula/android_development/master/dataPassing.png">
 
 **acivity_main.xml**
-
 ``` XML
 
 <?xml version="1.0" encoding="utf-8"?>
@@ -220,11 +219,9 @@ startActivity(messageIntent);
 
     </LinearLayout>
 </LinearLayout>
-
 ```
 
 **MainAcivity.java:**
-
 ```Java
 package com.muneiah.intentstypetest;
 
@@ -266,11 +263,9 @@ public static final String KEY="apssdc.in";
         startActivity(int_obj);
     }
 }
-
-
 ```
-**AndroidManifest.xml**
 
+**AndroidManifest.xml**
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
@@ -323,10 +318,8 @@ public static final String KEY="apssdc.in";
     android:layout_gravity="center"
     />
 </LinearLayout>
-
 ```
 **SecondActivity.java**
-
 ```java
 import androidx.appcompat.app.AppCompatActivity;
 
