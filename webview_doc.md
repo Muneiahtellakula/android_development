@@ -13,7 +13,7 @@
 
 
 **To add a WebViewto your app in the layout, add the following code to your activity's layout XML file:**
-```
+``` xml
 <WebView
     android:id="@+id/webview"
     android:layout_width="match_parent"
@@ -22,7 +22,7 @@
 ```
 ## To load a web page in the WebView, use loadUrl(). For example:
 
-```
+``` Java
 WebView myWebView = (WebView) findViewById(R.id.webview);
 myWebView.loadUrl("http://www.example.com");
 
@@ -30,7 +30,7 @@ myWebView.loadUrl("http://www.example.com");
 **Before this works, however, your app must have access to the Internet. To get internet access, request the INTERNET permission in your manifest file.**
 
 * For example:
-```
+```xml
 <manifest ... >
       <uses-permission android:name="android.permission.INTERNET" />
         ...
@@ -55,7 +55,7 @@ myWebView.loadUrl("http://www.example.com");
  
 * JavaScript is disabled in a WebView by default. You can enable it through the WebSettings attached to your WebView.You can retrieve WebSettings with getSettings(), then enable JavaScript with setJavaScriptEnabled().
 
-```
+``` java
 WebView myWebView = (WebView) findViewById(R.id.webview);
 WebSettings webSettings = myWebView.getSettings();
 webSettings.setJavaScriptEnabled(true);
@@ -159,7 +159,7 @@ webSettings.setJavaScriptEnabled(true);
 
 **options_menu.xml**
 
-```
+```xml
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
