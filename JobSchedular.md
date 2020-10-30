@@ -75,3 +75,48 @@ What’s different, though, is that you need to add a permission that will allow
   android:permission="android.permission.BIND_JOB_SERVICE"
   android:exported="true"/>
 ```
+
+### Second, consider the conditions that must be true to run your job.
+
+Remember: the great advantage to JobScheduler is that it doesn’t perform work solely based on time, but rather based on conditions. (Which means you no longer need a repeating alarm to go off every few hours so that you can check to see if now is a good time to sync with your server.) You can define these conditions through the JobInfo object. To build that JobInfo object, you need two things every time ( and then the criteria are the bonus bits): a job number — to help you distinguish which job this is — and your JobService.
+```Java
+JobScheduler jobScheduler =
+    (JobScheduler) getSystemService(Context.JOB_SCHEDULER_SERVICE);
+jobScheduler.schedule(new JobInfo.Builder(LOAD_ARTWORK_JOB_ID,
+    new ComponentName(this, DownloadArtworkJobService.class))
+    .setRequiredNetworkType(JobInfo.NETWORK_TYPE_ANY)
+    .build());
+```
+Let’s take a moment and talk about the potential criteria you can include in your JobInfo object.
+
+* **Network type (metered/unmetered)**
+    If your job requires network access, you must include this condition. You can specify a metered or unmetered network, or any type of network. But not calling this when building your JobInfo means the system will assume you do not need any network access and you will not be able to contact your server.
+
+* **Charging and Idle**
+    If your app needs to do work that is resource-heavy, it is highly recommended that you wait until the device is plugged in and/or idle. (Note that “idle” here is not the same as the Doze idle mode, but rather just means the screen is off and it hasn’t been used in a little while.)
+
+* **Content Provider update**
+    As of API 24, you can now use a content provider change as a trigger to perform some work. You will need to specify the trigger URI, which will be monitored with a ContentObserver. You can also specify a delay before your job is triggered, if you want to be certain that all changes propagate before your job is run.
+
+* **Backoff criteria**
+    You can specify your own back-off/retry policy. This defaults to an exponential policy, but if you set your own and then return true for rescheduling a job (with onStopJob(), for example), the system will employ your specified policy over the default.
+* **Minimum latency and override deadline**
+    If your job cannot start for at least X amount of time, or cannot be delayed past a specific time, you can specify those values here. Even if all conditions have not been met, your job will be run by the deadline (you can check the result of isOverrideDeadlineExpired() to determine if you’re in that case). And if they are met, but your minimum latency has not elapsed, your job will be held.
+* **Periodic**
+    If you have work that needs to be done regularly, you can set up a periodic job. This is a great alternative to a repeating alarm for most developers. Because you sort it all out once, schedule it, and the job will run once in each specified period.
+* **Persistent**
+    Any work that needs to be persisted across a reboot can be marked as such here. Once the device reboots, the job will be rescheduled according to the conditions. (Note that your app needs the RECEIVE_BOOT_COMPLETED permission for this to work, though.)
+* **Extras**
+    If your job needs some information from your app to perform its work, you can pass along primitive data types as extras in the JobInfo.
+
+Finally, consider when to schedule your job.
+
+You can schedule a job using JobScheduler, which you will retrieve from the system. Then, call schedule() using your JobInfo object, and you are good to go. No worries needed.
+```Java
+JobScheduler jobScheduler =
+    (JobScheduler) getSystemService(Context.JOB_SCHEDULER_SERVICE);
+jobScheduler.schedule(new JobInfo.Builder(LOAD_ARTWORK_JOB_ID,
+    new ComponentName(this, DownloadArtworkJobService.class))
+    .setRequiredNetworkType(JobInfo.NETWORK_TYPE_ANY)
+    .build());
+```
