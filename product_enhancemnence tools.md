@@ -74,8 +74,8 @@
 ## 12. Assign few Tasks To the Students:
    * Students Marks Grading System - using Files Read the marks of 100 Students(Use random function to generate the marks) to the file and print the following
 details
-   i. Print the average marks of all the students in the class
-   ii. Print total number of students failed in the test (Marks<40 are failed)
-   iii. Print total number of students who scored the highest marks.
+   * i. Print the average marks of all the students in the class
+   * ii. Print total number of students failed in the test (Marks<40 are failed)
+   * iii. Print total number of students who scored the highest marks.
 
 
