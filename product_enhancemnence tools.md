@@ -14,9 +14,9 @@
 - 2 GB RAM is recommended(Minimum)
 - Good Internet Connectivity
 ## 1. Google Tools 
-  *  a. Google Mail
-  *  b. Google Drive
-  *  c. Google Docs
+  *  Google Mail
+  *  Google Drive
+  *  Google Docs
   *  Google Calendar
   *  Google Sheets
   *  Google Slides
@@ -30,17 +30,16 @@
   *  Github
 ## 4. Raptor
   *  Introduction to Raptor
-  *     b. Explanation of Symbol/Blocks in Raptor
-  
-c. Flowchart 1: Greet the user(Example Output: "Good Morning")
-d. Flowchart 2: Calculate the sum of two numbers by reading the numbers from user
-5. Raptor Arithmetic operations(-,*,/,//,%,^):
-a. Addition
-b. Subtraction
-c. Multiplication
-d. Division
-e. Power
-f. Assign few tasks To the students
+  *  Explanation of Symbol/Blocks in Raptor
+  *  Flowchart 1: Greet the user(Example Output: "Good Morning")
+  *  Flowchart 2: Calculate the sum of two numbers by reading the numbers from user
+  * **Raptor Arithmetic operations(-,*,/,//,%,^):**
+        a. Addition
+        b. Subtraction
+        c. Multiplication
+        d. Division
+        e. Power
+        f. Assign few tasks To the students
 6. Decision Control Structure in Raptor:
 a. if-else
 b. Nested-if
