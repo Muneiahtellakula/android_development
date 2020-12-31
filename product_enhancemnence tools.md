@@ -22,7 +22,7 @@ Hardware Requirements:
      - Linkedin
      - Stack Overflow
 3. Code Management
-a. Basic Linux Commands
+     - Basic Linux Commands
 
 # Introduction to Productivity Enhancement Tools
 
