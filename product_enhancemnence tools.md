@@ -1,11 +1,11 @@
 # Productivity Enhancement Tools
-* Introduction:
+* **Introduction:**
 
-    Google has created something truly remarkable with its Google Docs application suite.We've all used Microsoft Office or some other office productivity applications suite before but it's not like this. There are no applications to install or licenses to purchase. Google tools will help you improve your productivity of work.
-    
-    RAPTOR is a flowchart-based programming environment, designed specifically to help students visualize their algorithms and avoid syntactic baggage. RAPTOR programs are created visually and executed visually by tracing the execution through the flowchart. Required syntax is kept to a minimum.
+     **Google has created something truly remarkable with its Google Docs application suite.We've all used Microsoft Office or some other office productivity applications suite before but it's not like this. There are no applications to install or licenses to purchase. Google tools will help you improve your productivity of work.**
+        
+     **RAPTOR is a flowchart-based programming environment, designed specifically to help students visualize their algorithms and avoid syntactic baggage. RAPTOR programs are created visually and executed visually by tracing the execution through the flowchart. Required syntax is kept to a minimum.**
   
-Hardware Requirements:
+# Hardware and Software Requirements:
 - i3 or above Processor is required
 - 2 GB RAM is recommended(Minimum)
 - Good Internet Connectivity
