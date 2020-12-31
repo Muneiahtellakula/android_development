@@ -29,7 +29,7 @@
 
    In this lesson, we'll talk about some of the **features** and **advantages** of Gmail, and we'll give an overview of the **Gmail window.**
    
-   <img src="https://raw.githubusercontent.com/Muneiahtellakula/android_development/master/intro_LG_v6.jpg">
+  <img src="https://raw.githubusercontent.com/Muneiahtellakula/android_development/master/intro_inbox_gmail2.jpg">
    
    
    #### Google accounts
@@ -54,7 +54,8 @@ Ofcourse, you don't have to use any of these features. You may just want to focu
    When you're working with Gmail, you'll primarily be using the main Gmail interface. This window contains your inbox, and it allows you to navigate to your contacts, mail settings, and more. Also, if you use other Google services like YouTube or Calendar, you'll be able to access them from the top of the Gmail window.
 
    Click the buttons in the interactive below to learn about the different parts of the Gmail interface.
-
+   
+ <img src="https://raw.githubusercontent.com/Muneiahtellakula/android_development/master/intro_LG_v6.jpg">
 
 
 ## 2. Digital Profiles
