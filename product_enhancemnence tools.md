@@ -18,14 +18,11 @@ Hardware Requirements:
      - Google Slides
      - Google Forms
      - Google Slides
-    
- 2. Digital Profiles
- 
-    - Linkedin 
-    - Stack Overflow
-    
-    - Github   
-    - Raptor
+2. Digital Profiles
+     - Linkedin
+     - Stack Overflow
+3. Code Management
+a. Basic Linux Commands
 
 # Introduction to Productivity Enhancement Tools
 
