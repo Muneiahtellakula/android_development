@@ -14,16 +14,16 @@
 - 2 GB RAM is recommended(Minimum)
 - Good Internet Connectivity
 ## 1. Google Tools 
-     - Google Mail
-     - Google Drive
-     - Google Docs
-     - Google Calendar
-     - Google Sheets
-     - Google Slides
-     - Google Forms
-     - Google Slides
+  *  Google Mail
+  *  Google Drive
+  *  Google Docs
+  *  Google Calendar
+  *  Google Sheets
+  *  Google Slides
+  *  Google Forms
+  *  Google Slides
 ## 2. Digital Profiles
-     - Linkedin
-     - Stack Overflow
+  *  Linkedin
+  *  Stack Overflow
 ## 3. Code Management
-     - Basic Linux Commands
+  *  Basic Linux Commands
