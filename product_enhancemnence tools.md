@@ -33,59 +33,49 @@
   *  Explanation of Symbol/Blocks in Raptor
   *  Flowchart 1: Greet the user(Example Output: "Good Morning")
   *  Flowchart 2: Calculate the sum of two numbers by reading the numbers from user
-  * **Raptor Arithmetic operations(-,*,/,//,%,^):**
-        a. Addition
-        b. Subtraction
-        c. Multiplication
-        d. Division
-        e. Power
-        f. Assign few tasks To the students
-6. Decision Control Structure in Raptor:
-a. if-else
-b. Nested-if
-c. Flowchart 3: Find if a given number is even or odd
-d. Assign few tasks To the students (Swap Two given numbers)
-7. Loop Control Structure in Raptor:
-a. Flowchart 4: Print all the natural numbers from 1 to 10 (Loops)
-b. Assign few tasks To the students (Print all the natural numbers from 10 to 1
-(Using Loops)
-
-8. Useful Math Functions in Raptor:
-a. (Ex: random, abs, floor, sqrt etc.,)
-b. Flowchart 5: Flowchart to print the floor of the division operation
-c. Flowchart 6: Print all the even numbers from 1 to 100
-d. Assign few tasks To the students (Print all the odd numbers with in any given
-range)
-e. Flowchart 7: Find if the given number is prime or Composite
-f. Assign few tasks To the students (Print all the prime numbers with in the given
-range)
-g. Flowchart 8: Find Factorial Of a given number
-9. Procedures in Raptor:
-a. Explain 2 Programs Using Procedures
-b. Assign few tasks To the students (Above Programs)
-10. Arrays in Raptor:
-a. Flowchart 11: Read elements into the array and print them
-
-b. Assign few tasks To the students (Sum all the integer elements in the array and
-print the result)
-c. Flowchart 12: find the largest integer element in the given array
-d. Assign few tasks To the students (Find the second largest element in the given
-array using procedure calls)
-e. Flowchart 13: To find the kth largest element from the array
-f. Assign few tasks To the students (Find the average of all prime numbers in the
-given range)
-11. Files in Raptor:
-a. Opening a file, reading from it & writing to it
-b. Flowchart 14: Write 10 random lines into the file.
-c. Assign few tasks To the students (Print all the prime numbers from 1 to 100)
-d. Flowchart 15: find the average of all primes between 1 to 100, reading the prime
-numbers from the file
-12. Assign few Tasks To the Students:
-a. Students Marks Grading System - using Files Read the marks of 100 Students
-(Use random function to generate the marks) to the file and print the following
+## 5. Raptor Arithmetic operations(-,*,/,//,%,^):**
+  *   Addition
+  *   Subtraction
+  *   Multiplication
+  *   Division
+  *   Power
+  *   Assign few tasks To the students
+## 6. Decision Control Structure in Raptor:
+   *  if-else
+   *  Nested-if
+   *  Flowchart 3: Find if a given number is even or odd
+   *   Assign few tasks To the students (Swap Two given numbers)
+## 7. Loop Control Structure in Raptor:
+   *  Flowchart 4: Print all the natural numbers from 1 to 10 (Loops)
+   *  Assign few tasks To the students (Print all the natural numbers from 10 to 1(Using Loops)
+## 8. Useful Math Functions in Raptor:
+   *  Ex: random, abs, floor, sqrt etc.,
+   *  Flowchart 5: Flowchart to print the floor of the division operation
+   *  Flowchart 6: Print all the even numbers from 1 to 100
+   *  Assign few tasks To the students (Print all the odd numbers with in any given range)
+   *  Flowchart 7: Find if the given number is prime or Composite
+   *  Assign few tasks To the students (Print all the prime numbers with in the given range)
+   *  Flowchart 8: Find Factorial Of a given number
+## 9. Procedures in Raptor:
+   *  Explain 2 Programs Using Procedures
+   *  Assign few tasks To the students (Above Programs)
+## 10. Arrays in Raptor:
+   *  Flowchart 11: Read elements into the array and print them
+   *  Assign few tasks To the students (Sum all the integer elements in the array and print the result)
+   *  Flowchart 12: find the largest integer element in the given array
+   *  Assign few tasks To the students (Find the second largest element in the given array using procedure calls)
+   *  Flowchart 13: To find the kth largest element from the array
+   *  Assign few tasks To the students (Find the average of all prime numbers in the given range)
+## 11. Files in Raptor:
+   *  Opening a file, reading from it & writing to it
+   *  Flowchart 14: Write 10 random lines into the file.
+   *  Assign few tasks To the students (Print all the prime numbers from 1 to 100)
+   *  Flowchart 15: find the average of all primes between 1 to 100, reading the prime numbers from the file
+## 12. Assign few Tasks To the Students:
+   * Students Marks Grading System - using Files Read the marks of 100 Students(Use random function to generate the marks) to the file and print the following
 details
-i. Print the average marks of all the students in the class
-ii. Print total number of students failed in the test (Marks<40 are failed)
-iii. Print total number of students who scored the highest marks.
+        i. Print the average marks of all the students in the class
+        ii. Print total number of students failed in the test (Marks<40 are failed)
+        iii. Print total number of students who scored the highest marks.
 
 
