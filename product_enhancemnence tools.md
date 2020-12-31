@@ -14,7 +14,8 @@
 - 2 GB RAM is recommended(Minimum)
 - Good Internet Connectivity
 ## 1. Google Tools 
-  *  Google Mail
+  ###  Google Mail
+                
   *  Google Drive
   *  Google Docs
   *  Google Calendar
@@ -33,7 +34,7 @@
   *  Explanation of Symbol/Blocks in Raptor
   *  Flowchart 1: Greet the user(Example Output: "Good Morning")
   *  Flowchart 2: Calculate the sum of two numbers by reading the numbers from user
-## 5. Raptor Arithmetic operations(-,*,/,//,%,^):**
+## 5. Raptor Arithmetic operations(-,*,/,//,%,^)
   *   Addition
   *   Subtraction
   *   Multiplication
