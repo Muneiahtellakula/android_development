@@ -9,17 +9,15 @@ Hardware Requirements:
 - i3 or above Processor is required
 - 2 GB RAM is recommended(Minimum)
 - Good Internet Connectivity
-## Content:
-
- 1. Google
-     a. Google Mail
-     b. Google Drive
-     c. Google Docs
-     d. Google Calendar
-     e. Google Sheets
-     f. Google Slides
-     g. Google Forms
-     h. Google Slides
+1. Google Tools
+     - Google Mail
+     - Google Drive
+     - Google Docs
+     - Google Calendar
+     - Google Sheets
+     - Google Slides
+     - Google Forms
+     - Google Slides
     
  2. Digital Profiles
  
