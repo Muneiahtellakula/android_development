@@ -27,7 +27,10 @@
   #### Introduction to Gmail
    Gmail is a free email service provided by Google. In many ways, Gmail is like any other email service: You can send and receive emails, block spam, create an address book, and perform other basic email tasks. But it also has some more unique features that help make it one of the most popular online email services.**
 
-   In this lesson, we'll talk about some of the features and advantages of Gmail, and we'll give an overview of the Gmail window.
+   In this lesson, we'll talk about some of the **features** and **advantages** of Gmail, and we'll give an overview of the **Gmail window.**
+   
+   <img src="https://raw.githubusercontent.com/Muneiahtellakula/android_development/master/intro_LG_v6.jpg">
+   
    
    #### Google accounts
 
