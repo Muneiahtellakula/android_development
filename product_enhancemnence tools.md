@@ -22,7 +22,12 @@
   *  Google Slides
   *  Google Forms
   *  Google Slides
-## **Google Mail**
+## Google Mail (Using Gmail)
+
+   - Introduction to Gmail
+   
+   - Get an introduction to Gmail.
+
 
 ## 2. Digital Profiles
   *  Linkedin
