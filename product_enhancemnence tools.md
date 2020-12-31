@@ -24,9 +24,16 @@
   *  Google Slides
 ## Google Mail (Using Gmail)
 
-   - Introduction to Gmail
+  #### Introduction to Gmail
+   Gmail is a free email service provided by Google. In many ways, Gmail is like any other email service: You can send and receive emails, block spam, create an address book, and perform other basic email tasks. But it also has some more unique features that help make it one of the most popular online email services.**
+
+   In this lesson, we'll talk about some of the features and advantages of Gmail, and we'll give an overview of the Gmail window.
    
-   - Get an introduction to Gmail.
+   #### Google accounts
+
+   Creating a Google account is needed to access Gmail because it is just one of the many services offered by Google to registered users. Signing up for a Google account is free and easy, and naming your new Gmail address will be a part of the sign-up process. This means whenever you're signed in to Gmail, you are automatically signed in to your Google account. You'll be able to easily access other Google services like Google Docs, Calendar, and YouTube.
+
+Ofcourse, you don't have to use any of these features. You may just want to focus on email for now. However, if you'd like more information, you can review our Google account tutorial, where we talk about some of the different services Google offers and show you how to change your privacy settings.
 
 
 ## 2. Digital Profiles
