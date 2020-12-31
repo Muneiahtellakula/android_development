@@ -14,9 +14,9 @@
 - 2 GB RAM is recommended(Minimum)
 - Good Internet Connectivity
 ## 1. Google Tools 
-  *  Google Mail
-  *  Google Drive
-  *  Google Docs
+  *  a. Google Mail
+  *  b. Google Drive
+  *  c. Google Docs
   *  Google Calendar
   *  Google Sheets
   *  Google Slides
