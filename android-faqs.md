@@ -63,5 +63,4 @@ mTask.cancel(true);
      task.execute();
 //Before HONEYCOMB execute() method run AsynkTask in parallel.
 
-*\
 ```
