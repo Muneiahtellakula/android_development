@@ -1,4 +1,4 @@
-* Android: Difference between Parcelable and Serializable?
+* Android: Difference between Parcelable and Serializable?[Ref Link](https://stackoverflow.com/questions/3323074/android-difference-between-parcelable-and-serializable)
     * **Serializable**
 
       * Serializable is a markable interface or we can call as an empty interface. It doesn’t have any pre-implemented methods. Serializable is going to convert an object to byte stream. So the user can pass the data between one activity to another activity. The main advantage of serializable is the creation and passing data is very easy but it is a slow process compare to parcelable.
