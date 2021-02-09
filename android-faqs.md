@@ -1,3 +1,20 @@
+* What is IPC is inter-process communication ?[Ref Link](https://stackoverflow.com/questions/5740324/what-are-the-ipc-mechanisms-available-in-the-android-os)
+
+   * Intents (along with Bundles)
+   
+   * Binders
+   
+   * ASHMEM (Anonymous Shared Memory) - The main difference between Linux shared memory and this shared memory is, in Linux other processes can't free the shared memory but here      if other processes require memory this memory can be freed by Android OS.
+   
+   IPC is inter-process communication. It describes the mechanisms used by different types of android components to communicate with one another.
+
+   1) Intents are messages which components can send and receive. It is a universal mechanism of passing data between processes. With help of the intents one can start services       or activities, invoke broadcast receivers and so on.
+
+   2) Bundles are entities of data that is passed through. It is similar to the serialization of an object, but much faster on android. Bundle can be read from intent via the getExtras() method.
+
+   3) Binders are the entities which allow activities and services to obtain a reference to another service. It allows not simply sending messages to services but directly invoking methods on them
+   
+   
 * Android: Difference between Parcelable and Serializable?[Ref Link](https://stackoverflow.com/questions/3323074/android-difference-between-parcelable-and-serializable)
     * **Serializable**
 
