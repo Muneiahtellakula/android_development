@@ -1,3 +1,10 @@
+* What does FragmentManager and FragmentTransaction exactly do?
+  * FragmentManager which is used to create transactions for adding, removing or replacing fragments.
+  
+  ```Java
+  fragmentManager.beginTransaction();
+  ```
+
 * What is IPC is inter-process communication ?[Ref Link](https://stackoverflow.com/questions/5740324/what-are-the-ipc-mechanisms-available-in-the-android-os)
 
    * Intents (along with Bundles)
