@@ -5,6 +5,7 @@ JOB DESCRIPTION :
 - Familiarity with the use of additional sensors, such as gyroscopes and accelerometers
 - A knack for benchmarking and optimization
 - Experience in MVVM, Kotlin
+- Services and it's types
 - Understanding on the latest Android SDK changes and security fixes
 - Knowledge of Google Firebase suite
 - Experience in integration of OkHttp, Retrofit, ButterKnife, Image caching libraries
