@@ -1,4 +1,31 @@
 # Android Application Development topics
+Job Description:-
+
+Position Title Android Sr. Developer
+Minimum Qualification Btech
+Detailed Job Description: ( Must have a JD of 4-5 lines as minimum ask with clear specification of Mandatory and Secondary skills required) "Java/Kotlin Programming skills
+Functional & Object-oriented programming
+Intents, services, activity
+Kotlin basics - Singleton, Data Class, Companion objects, Open/Sealed Class/Public, var & val, Null Safety, coroutines
+Types of views, Containers, Recycler view
+Invoking Kotlin from Java and Vice Versa
+RxJava/ RxAndroid
+OKHttp, Retrofit & Handling models
+GIT, Jenkins/Gradle,  Code Quality - Detekt, SonarQube,
+"
+
+Good to Have Skills (3-4 skills, point wise) "MVVM/MVP/MVC, Singleton/Façade/Observer
+Implementation with example
+Extension function, Lazy initialization,  late init modifier, higher order function , inline function
+Offline, Location, Maps, external device integrations
+Handling Bacground Tasks
+Exposure to Junit, Mockito, Kotlin test
+Chaining, preventing Man in the middle attacks(security), encryption
+Android Signed Bundle/APK
+Experience in Store Deployments
+SOLID Principle
+Clean Architecture
+Basic of Data Structure"
 
 JOB DESCRIPTION : 
  -Experience in Android latest versions in Android Native
