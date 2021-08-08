@@ -1,6 +1,6 @@
 # Android Application Development topics
 Job Description:-
-
+For interview purpose
 Position Title Android Sr. Developer
 Minimum Qualification Btech
 Detailed Job Description: ( Must have a JD of 4-5 lines as minimum ask with clear specification of Mandatory and Secondary skills required) "Java/Kotlin Programming skills
