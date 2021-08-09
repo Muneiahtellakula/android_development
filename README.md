@@ -40,3 +40,42 @@ JOB DESCRIPTION :
 - Familiarity with continuous integration
 - Experience in Releasing Application in Play stores
 - Strong knowledge of Android UI design principles, patterns, and best practices
+
+----------------------------------------
+·         Minimum 6 years of mobile application development experience in native and excellent coding skills into Core Java, Collections, Kotlin, Expertise in Android SDK
+
+·         Has Experience In SQLite, Google APIs, Social APIs, Core Android APIs, Framework APIs (Camera , Media),Push Notification and worked with App Security’s.
+
+·         Worked with third party library integration and firebase.
+
+·         Strong Knowledge of Android Component and Component’s lifecycle
+
+·         Has a deep knowledge of Multithreading and background tasks?
+
+·         Experience developing client-server applications using technologies and web services APIs such as JSON, REST
+
+·         Has hands-on experience with unit testing
+
+·         Knowledge of UI/UX best practices and design standards, experience with localization tools for mobile applications. Knowledge of debug and test tools like UI Automation
+
+·         Extensive experience in design patterns MVP, MVVP
+
+·         Experience in version control (SVN, GIT)
+
+·         Can show case published apps in the Play Store?
+
+·         Solid understanding of the agile development process and experience
+
+·         Experience working in TDD (Test Driven Development) and CI/CD (Continuous Integration/Deployment) environments is a plus
+
+·         Implement clean and manageable code incorporating best practices on security
+
+·         Collaborate with cross-functional teams from both offshore and onsite to define, design and ship new features
+
+·         Unit-test code for robustness, including edge cases, usability and general reliability
+
+·         Continuously discover, evaluate and implement new technologies to maximize development efficiency
+
+·         Review code, bug triage and execute multiple releases as per business demand
+
+·         Involvement with API team to design request/response contract
