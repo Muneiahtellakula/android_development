@@ -3,8 +3,10 @@
 # Android App Development Skill set and Reference 
 1. [ Jetpack Compose
 Essentials ](https://www.ebookfrenzy.com/pdf_previews/JetpackComposeEssentialsPreview.pdf)
-2. [Jetpack Compose 1.5
-Essentials](https://www.payloadbooks.com/wp-content/uploads/2024/01/JetpackCompose1.5EssentialsPreview_optimized.pdf)
+2. [Jetpack Compose 1.5 Essentials](https://www.payloadbooks.com/wp-content/uploads/2024/01/JetpackCompose1.5EssentialsPreview_optimized.pdf)
+3. [Introduction to Jetpack Compose ](https://on.notist.cloud/pdf/deck-257b60608ba418fa.pdf)
+4. 
+
    
 Job Description:-
 For interview purpose
