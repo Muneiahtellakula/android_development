@@ -89,4 +89,4 @@ JOB DESCRIPTION :
 
 ·         Involvement with API team to design request/response contract
 
-[Visitor Count] (https://profile-counter.glitch.me/{Muneiahtellakula}/count.svg)
+[Visitor Count](https://profile-counter.glitch.me/{Muneiahtellakula}/count.svg)
