@@ -89,4 +89,8 @@ JOB DESCRIPTION :
 
 ·         Involvement with API team to design request/response contract
 
-[Visitor Count](https://profile-counter.glitch.me/{Muneiahtellakula}/count.svg)
+
+
+## Visitors Count
+
+<img align="left" src = "https://profile-counter.glitch.me/android_development/count.svg" alt ="Loading">
